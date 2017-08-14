@@ -178,22 +178,24 @@ One of the simplest equations of state is the ideal gas law (IGL) (in standard f
 \begin{equation}
   Pv-RT = 0
 \end{equation}
-However, the IGL describes gas phase behavior in the limit of low pressure.
-The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model).
-Thus, IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
+The IGL ignores both the volume of the molecules in the gas, and all electrostatic interactions between them (hard-sphere model).
+While this makes the IGL simple to use, these assumptions do not allow the IGL to describe realistic gases and pressures; IGL describes gas phase behavior in the limit of low pressure.
 One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
 
 Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
-Then a Virial equation of state is the power-series of either pressure $P$ or
+Then, by definition the compressibility factor for an ideal gas is Z=1.
+As the behavior of the gas deviates from the IGL, the compressibility factor can be used a correction.
+The model for how the compressibility changes with pressure (or alternatively with molar volume) is called the
+Virial equation of state.  In particular, the Virial equation of state is the power-series of either pressure $P$ or
 inverse powers of the molar (or specific) volume $v$:
 \begin{equation}
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
 \end{equation}
-where $Z$ denotes the compressibility factor, and $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
-The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
+where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another and are strong functions of temperature)
 describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
-These coefficients can be estimated from data for each material of interest, or can be derived
+These coefficients can be estimated from data for each material of interest, or they can be derived
 from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
 In all cases, $\alpha_{0}=\alpha^{\prime}_{0}=1$, however beyond the first coefficient in the series the coefficients are given by:
 \begin{eqnarray*}\nonumber
@@ -201,6 +203,18 @@ In all cases, $\alpha_{0}=\alpha^{\prime}_{0}=1$, however beyond the first coeff
   \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
   & \vdots &
 \end{eqnarray*}
+
+\begin{mdframed}[backgroundcolor=lgray]
+	\noindent\textbf{Example}: Estimate the second and Virial coefficient ($\alpha_{1}$) for CH$_\mathrm{4}$ from compressibility data.
+
+	\noindent\textbf{Solution.}\\
+
+	To estimate the second Virial coefficient 
+
+
+
+
+\end{mdframed}
 
 \subsubsection*{Cubic Equations of State}
 Polynomials equations that are cubic in molar (or specific) volume $v$ are the simplest equations of state that can describe both liquid and vapor behavior.
