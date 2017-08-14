@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{vdW-Thesis}
+{van der Waals, J D} (1873) {On the Continuity of the Gaseous and Liquid
+  States}.
+\newblock Ph.D. thesis, {Universiteit Leiden, Leiden, The Netherlands}.
+\bibAnnoteFile{vdW-Thesis}
+
+\bibitem{Valderrama2003}
+{Jose ́ O Valderrama} (2003) {The State of the Cubic Equations of State}.
+\newblock {Ind Eng Chem Res} 42: 1603-1618.
+\bibAnnoteFile{Valderrama2003}
+
+\end{thebibliography}
