@@ -127,7 +127,7 @@ At the end of this lecture module, you will be able to:
 \begin{itemize}
 	\item[O$_1$]{Perform unit thermodynamic expansion and contraction operations using an ideal gas as a working fluid}
 	\item[O$_2$]{Perform unit thermodynamic expansion and contraction operations using advanced cubic equations of state as the working fluid}
-	\item[O$_3$]{Calculate the efficiency of hypothetical power generation cycles using the ideal gas as working fluid}
+	\item[O$_3$]{Calculate the efficiency of hypothetical power generation cycles using the ideal gas as a working fluid}
 \end{itemize}
 
 \end{mdframed}
@@ -135,8 +135,9 @@ At the end of this lecture module, you will be able to:
 \clearpage
 
 \section*{Introduction}
-Just like complex chemical processes can be decomposed into many interconnected unit operations, processes that have been devised to convert heat to work e.g., a steam engines or a steam powered turbines
-can also thought of as interconnected operations. These thermodynamic operations, called \textit{paths}, are composed of two types of physical operations, isothermal expansion (or contraction) and adiabatic expansion (or contraction). Let's start our discussion of these processes for \textit{closed} systems. Recall, that our general energy and material balances can be written in
+Just like complex chemical processes can be decomposed into many interconnected unit operations,
+processes devised to convert heat to work e.g., steam engines, steam powered turbines or the internal combustion engine in your car
+are also interconnected thermodynamic operations. These thermodynamic operations, called \textit{paths}, are composed of two types of physical operations, isothermal expansion (or contraction) and adiabatic expansion (or contraction). Let's start our discussion of these processes for \textit{closed} systems. Recall, that our general energy and material balances can be written in
 differential form as:
 \begin{eqnarray}\label{eqn:energy-balance-precursor-internal}
 d\left(mu\right)\Bigr|_{sys} &=& \delta{Q}+\delta{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}u_{s}\delta{m}_{s} + \sum_{r=1}^{\mathcal{R}}\delta E_{r}\\\label{eqn:material-balance-precursor-internal}
@@ -144,7 +145,7 @@ dm &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\delta{m}_{s}
 \end{eqnarray}where we have neglected changes in kinetic and potential energy in the system. For a closed system with no chemical reactions, our general differential balances reduce to:
 \begin{equation}\label{eqn:first-law-differential}
 dU = \delta{Q}+\delta{W}
-\end{equation}and $dm$ = 0. Eqn \eqref{eqn:first-law-differential} is the first-law of thermodynamics for a closed system with no chemical reactions,
+\end{equation}and $\delta{m}_{s}$ = 0~$\forall{s}$. Eqn \eqref{eqn:first-law-differential} is the first-law of thermodynamics for a closed system with no chemical reactions,
 where we have neglected changes in kinetic and potential energy. For each stage of our process, we'll apply the first law and then sum the work that is generated from the cycle.
 
 \begin{figure*}[!ht]\centering
@@ -152,7 +153,7 @@ where we have neglected changes in kinetic and potential energy. For each stage 
 \caption{Schematic of the Carnot cycle. A working fluid is isothermally expanded from $\mathbb{P}_1$ to $\mathbb{P}_2$, and then adiabatically expanded from $\mathbb{P}_2$ to $\mathbb{P}_3$. The working fluid is then isothermally compressed from $\mathbb{P}_3$ to $\mathbb{P}_4$, and then adiabatically compressed from $\mathbb{P}_4$ back to the starting point $\mathbb{P}_1$.}\label{fig-carnot-cycle}
 \end{figure*}
 
-\subsection*{Carnot heat cycle for a closed system.}
+\subsection*{Carnot heat cycle for a closed system}
 The Carnot cycle, named after the French engineer Sadi Carnot, is a hypothetical set of reversible expansion/compression operations
 developed in 1824 as a model for the conversion of heat to work \cite{CARNOT_1824}.
 The Carnot cycle involves two heat reservoirs, a hot reservoir maintained at $T_{H}$ and a cold reservoir maintained at $T_{L}$, along with two reversible isothermal operations,
@@ -244,7 +245,7 @@ W_{4} = C_{V}\left(T_{H} - T_{L}\right)
 \end{equation}}
 \end{itemize}
 
-\subsection*{Efficiency of the Carnot cycle.}
+\subsection*{Efficiency of the Carnot cycle}
 The efficiency of a Carnot cycle, denoted by the symbol $\eta$, is defined as the net work done by the system, divided by the net input heat:
 \begin{equation}
 \eta = -\frac{W_{net}}{Q_{in}}
@@ -256,10 +257,10 @@ hold and cold reservoirs:
 As we shall see, the Carnot cycle is the \textit{most} efficient cycle for converting heat to work.
 However, unfortunately Carnot is imaginary but it can serve as a useful model system to measure real results against.
 
-\subsubsection*{Change in a state function for a cyclic process.}
+\subsubsection*{Change in a state function for a cyclic process}
 Beyond its efficiency, one of the other interesting things about Carnot is that it nicely demonstrates one of the central properties of \textit{state functions}:
 \begin{equation}
-dU = \sum_{j=\mathbb{P}_{1}}^{\left\{\mathbb{P}\right\}}dU_j = 0
+dU = \sum_{j=\mathbb{P}_{1}}^{\left\{\mathbb{P}_{j}:\mathbb{P}_{j}\neq\mathbb{P}_{1}\right\}}dU_j = 0
 \end{equation}The net change in a state function, such as internal energy, temperature, pressure or volume (irrespective of the working fluid) is zero around a closed path.
 This has important consequences later, and is easy to see from our first law analysis of the Carnot cycle: where
 \begin{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2017 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2017 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,16 +564,16 @@ Package mdframed Info: mdframed detected package amsthm
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 139.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 140.
 
 <./figs/CarnotCycle.pdf, id=15, 400.49625pt x 299.1175pt>
 File: ./figs/CarnotCycle.pdf Graphic file (type pdf)
 
 <use ./figs/CarnotCycle.pdf>
-Package pdftex.def Info: ./figs/CarnotCycle.pdf used on input line 151.
+Package pdftex.def Info: ./figs/CarnotCycle.pdf used on input line 152.
 (pdftex.def)             Requested size: 281.85587pt x 210.52185pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 152.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 153.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -585,7 +585,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <./figs/CarnotCycle.pdf>]
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
  [3] [4] [5] (./Notes.bbl) [6] (./Notes.aux) )
 (\end occurred inside a group at level 1)
 
@@ -614,7 +614,7 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 live/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (6 pages, 147751 bytes).
+Output written on Notes.pdf (6 pages, 148878 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
