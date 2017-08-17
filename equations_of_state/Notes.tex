@@ -182,7 +182,6 @@ However, the IGL describes gas phase behavior in the limit of low pressure.
 The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model).
 Thus, IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
 One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
-
 Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
 A Virial equation of state is the power-series in either pressure $P$ or
 inverse powers of the molar (or specific) volume $v$:
@@ -190,17 +189,22 @@ inverse powers of the molar (or specific) volume $v$:
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
 \end{equation}
-where $Z$ denotes the compressibility factor, and $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
 The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
 describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
 These coefficients can be estimated from data for each material of interest, or can be derived
 from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
-In all cases, $\alpha_{0}=\alpha^{\prime}_{0}=1$, however beyond the first coefficient in the series the coefficients are given by:
+The Virial coefficients are given by:
 \begin{eqnarray*}\nonumber
-  \alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
+	\alpha_{0}=\alpha^{\prime}_{0} &=& 1 \\
+	\alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
   \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
   & \vdots &
 \end{eqnarray*}
+
+\begin{mdframed}[backgroundcolor=lgray]
+  \noindent\textbf{Example}: Estimate the second Virial coefficient $\alpha_{1}$ as a function of temperature from CH$_{\mathrm{4}}$ compressibility data.
+\end{mdframed}
 
 \subsubsection*{Cubic Equations of State}
 Polynomials equations that are cubic in molar (or specific) volume $v$ are the simplest equations of state that can describe both liquid and vapor behavior.
@@ -367,12 +371,14 @@ respectively and $\Delta{P}=P-P_{o}$ and $\Delta{T}=T-T_{o}$.
 
 \section*{Generalized correlation models}
 Generalized correlation models for the compressibility factor $Z$ and the second Virial coefficient $\alpha_{1}$ find widespread industrial use.
-The most popular of these correlations were developed by Pitzer and coworkers [REF].
+The most popular of these correlations was developed by Pitzer and coworkers [REF].
 The correlation for the compressibility factor is given by:
 \begin{equation}
 	Z = Z^{0}+\omega Z^{1}
 \end{equation}where $Z^{0}$ and $Z^{1}$ are functions of the \textit{reduced~temperature} T$_{r}$~=~TT$_{cr}^{-1}$ and \textit{reduced~pressure} P$_{r}$~=~PP$_{cr}^{-1}$,
-and $\omega$ denotes the \textit{accentric~factor}.
+and $\omega$ denotes the \textit{acentric~factor}.
+The acentric factor, introduced by Kenneth Pitzer in 1955, is a tool to characterize the phase of single components;
+at a molecular level the acentric factor is a measure of the non-sphericity (centricity) of molecules [REF].
 
 
 \bibliography{References.bib}
