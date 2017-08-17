@@ -39,17 +39,21 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 
+\usepackage{mdframed}
+\definecolor{lgray}{rgb}{0.92,0.92,0.92}
+\definecolor{lsalmon}{rgb}{1.0,0.63,0.48}
+
 \makeatletter
 \renewcommand\subsection{\@startsection
 	{subsection}{2}{0mm}
 	{-0.05in}
-	{-0.5\baselineskip}
+	{0.5\baselineskip}
 	{\normalfont\normalsize\bfseries}}
 \renewcommand\subsubsection{\@startsection
 	{subsubsection}{2}{0mm}
 	{-0.05in}
 	{-0.5\baselineskip}
-	{\normalfont\normalsize\itshape}}
+	{\normalfont\normalsize\bfseries}}
 \renewcommand\paragraph{\@startsection
 	{paragraph}{2}{0mm}
 	{-0.05in}
@@ -83,11 +87,11 @@
 \begin{document}
 
 %\begin{titlepage}
-{\par\centering\textbf{\Large CHEME 3130: Introduction and Analysis of Unit Paths in Thermodynamics}}
+{\par\centering\textbf{\Large CHEME 3130: Analysis of Unit Paths in Thermodynamics}}
 \vspace{0.2in}
 {\par \centering \large{Jeffrey D. Varner$^{*}$}}
 \vspace{0.05in}
-{\par \centering \large{$^{*}$}School of Chemical and Biomolecular Engineering}
+{\par \centering \large{$^{*}$}Robert Frederick Smith School of Chemical and Biomolecular Engineering}
 {\par \centering \large{Cornell University, Ithaca NY 14853}}
 \vspace{0.1in}
 {\par \centering \small{Copyright \copyright\ Jeffrey Varner 2017. All Rights Reserved.}}\\
@@ -98,7 +102,37 @@
 
 \setcounter{page}{1}
 
+\begin{mdframed}[backgroundcolor=lgray]
+\subsection*{Previously:}
+\noindent We introduced generalized equations of state of the form:
+\begin{equation}
+	\mathcal{F}\left(T,P,v\right) = 0
+\end{equation}
+Common equations of state used in process calculations are the ideal gas law (for proof of concept calculations), cubic equations of state and generalized correlation models. The ideal gas law:
+\begin{equation}
+	Pv - RT = 0
+\end{equation}is a hard-sphere model, molecules in the fluid occupy no volume and do not interact with another electrostatically.
+For realistic process calculations, cubic equations of state are used:
+\begin{equation}
+	P = \frac{RT}{\left(v-b\right)}-\frac{a(T)}{\left(v+\epsilon b\right)\left(v+\sigma b\right)}
+\end{equation}where $\epsilon$ and $\sigma$ are constants (the same for all substances), while
+$a(T)$ and $b$ are substance specific, and be calculated in terms the critical temperature and pressure:
+\begin{equation}
+	a\left(T\right) = \Psi\left[\frac{\alpha\left(T_{r}\right)R^{2}T^{2}_{\mathrm{cr}}}{P_{\mathrm{cr}}}\right]\qquad
+	b = \Omega\left[\frac{RT_{\mathrm{cr}}}{P_{\mathrm{cr}}}\right]
+\end{equation}
 
+\subsection*{Student outcomes:}
+At the end of this lecture module, you will be able to:
+\begin{itemize}
+	\item[O$_1$]{Perform unit thermodynamic expansion and contraction operations using an ideal gas as a working fluid}
+	\item[O$_2$]{Perform unit thermodynamic expansion and contraction operations using advanced cubic equations of state as the working fluid}
+	\item[O$_3$]{Calculate the efficiency of hypothetical power generation cycles using the ideal gas as working fluid}
+\end{itemize}
+
+\end{mdframed}
+
+\clearpage
 
 \section*{Introduction}
 Just like complex chemical processes can be decomposed into many interconnected unit operations, processes that have been devised to convert heat to work e.g., a steam engines or a steam powered turbines
@@ -210,7 +244,19 @@ W_{4} = C_{V}\left(T_{H} - T_{L}\right)
 \end{equation}}
 \end{itemize}
 
-\subsection*{Change in a state function for a cyclic process.}
+\subsection*{Efficiency of the Carnot cycle.}
+The efficiency of a Carnot cycle, denoted by the symbol $\eta$, is defined as the net work done by the system, divided by the net input heat:
+\begin{equation}
+\eta = -\frac{W_{net}}{Q_{in}}
+\end{equation}Using our first law results, we can put the efficiency in terms of the two operating parameters we control, the temperature of the
+hold and cold reservoirs:
+\begin{equation}\label{eqn:carnot-efficinecy}
+\eta = 1 - \frac{T_{L}}{T_{H}}
+\end{equation}We can increase the efficiency by allowing $T_{H}\rightarrow\infty$ or by having a small value for $T_{L}$.
+As we shall see, the Carnot cycle is the \textit{most} efficient cycle for converting heat to work.
+However, unfortunately Carnot is imaginary but it can serve as a useful model system to measure real results against.
+
+\subsubsection*{Change in a state function for a cyclic process.}
 Beyond its efficiency, one of the other interesting things about Carnot is that it nicely demonstrates one of the central properties of \textit{state functions}:
 \begin{equation}
 dU = \sum_{j=\mathbb{P}_{1}}^{\left\{\mathbb{P}\right\}}dU_j = 0
@@ -250,18 +296,7 @@ W_{net} = - nRT_{H}\ln\left(\frac{V_{2}}{V_{1}}\right) + C_{V}\left(T_{L} - T_{H
 W_{net} = - nRT_{H}\ln\left(\frac{V_{2}}{V_{1}}\right) - nRT_{L}\ln\left(\frac{V_{4}}{V_{3}}\right) \neq{0}
 \end{equation}
 
-\subsection*{Efficiency of the Carnot cycle.}
-One of the interesting features of the Carnot cycle is it's efficiency, denoted by the symbol $\eta$.
-The efficiency of a Carnot cycle is defined as the net work done by the system, divided by the net input heat:
-\begin{equation}
-\eta = -\frac{W_{net}}{Q_{in}}
-\end{equation}Using our first law results, we can put the efficiency in terms of the two operating parameters we control, the temperature of the
-hold and cold reservoirs:
-\begin{equation}\label{eqn:carnot-efficinecy}
-\eta = 1 - \frac{T_{L}}{T_{H}}
-\end{equation}We can increase the efficiency by allowing $T_{H}\rightarrow\infty$ or by having a small value for $T_{L}$.
-As we shall see, the Carnot cycle is the \textit{most} efficient cycle for converting heat to work.
-However, unfortunately Carnot is imaginary but it can serve as a useful model system to measure real results against.
+
 
 
 \bibliography{References}
