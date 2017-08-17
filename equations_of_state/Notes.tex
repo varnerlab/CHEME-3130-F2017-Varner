@@ -105,9 +105,9 @@
 \setcounter{page}{1}
 
 \begin{mdframed}[backgroundcolor=lgray]
-\subsection*{Recall}
-\noindent Previously we introduced the energy balance equation for an open and closed system.
-An open system allows both mass and energy transfer to occur between a system and its surroundings:
+\subsection*{Previously:}
+\noindent We introduced the energy balance for an open and closed system.
+An open system allows both mass and energy transfer between a system and its surroundings:
 \begin{eqnarray*}\label{eqn:general-open-balance}
 	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(u_{s}+gz_{s}+\frac{1}{2}s_{s}^{2}\right)\dot{m}_{s}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\\label{eqn:total-mass-balance}
 	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
@@ -117,13 +117,13 @@ On the other hand, in a closed system no mass transfer is allowed between the sy
   \frac{d}{dt}\Bigr[m\left(u+e_{K}+e_{P}\right)\Bigl]\Bigr|_{sys} = \dot{Q}+\dot{W}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
 \end{equation*}
 Lastly, we introduced pressure expansion work, and shaft work in the energy balance equations.
-In this lecture, we'll discuss the relationship between state variables and the physical composition of a system.
-In particular, we discuss:
+
+\subsection*{Student outcomes:}
+At the end of this lecture module, you will be able to:
 \begin{itemize}
-  \item{The phase behavior of a pure substance, and the Gibbs Phase Rule}
-  \item{The Virial equation of state}
-  \item{Cubic equations of state and van der Waals equation}
-  \item{Data driven equations of state}
+  \item[O$_1$]{Describe the assumptions associated with, and the similarities and differences between the ideal gas law, cubic equations of state, and the Virial equation of state}
+  \item[O$_2$]{Use the ideal and cubic equations of state to calculate the reversible work for isothermal and adiabatic expansion/contraction of gases}
+  \item[O$_3$]{Describe pressure-temperature (PT) and pressure-volume (PV) phase diagrams, the triple and critical points.}
 \end{itemize}
 \end{mdframed}
 
@@ -178,24 +178,22 @@ One of the simplest equations of state is the ideal gas law (IGL) (in standard f
 \begin{equation}
   Pv-RT = 0
 \end{equation}
-The IGL ignores both the volume of the molecules in the gas, and all electrostatic interactions between them (hard-sphere model).
-While this makes the IGL simple to use, these assumptions do not allow the IGL to describe realistic gases and pressures; IGL describes gas phase behavior in the limit of low pressure.
+However, the IGL describes gas phase behavior in the limit of low pressure.
+The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model).
+Thus, IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
 One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
 
 Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
-Then, by definition the compressibility factor for an ideal gas is Z=1.
-As the behavior of the gas deviates from the IGL, the compressibility factor can be used a correction.
-The model for how the compressibility changes with pressure (or alternatively with molar volume) is called the
-Virial equation of state.  In particular, the Virial equation of state is the power-series of either pressure $P$ or
+A Virial equation of state is the power-series in either pressure $P$ or
 inverse powers of the molar (or specific) volume $v$:
 \begin{equation}
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
 \end{equation}
-where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
-The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another and are strong functions of temperature)
+where $Z$ denotes the compressibility factor, and $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
 describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
-These coefficients can be estimated from data for each material of interest, or they can be derived
+These coefficients can be estimated from data for each material of interest, or can be derived
 from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
 In all cases, $\alpha_{0}=\alpha^{\prime}_{0}=1$, however beyond the first coefficient in the series the coefficients are given by:
 \begin{eqnarray*}\nonumber
@@ -203,18 +201,6 @@ In all cases, $\alpha_{0}=\alpha^{\prime}_{0}=1$, however beyond the first coeff
   \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
   & \vdots &
 \end{eqnarray*}
-
-\begin{mdframed}[backgroundcolor=lgray]
-	\noindent\textbf{Example}: Estimate the second and Virial coefficient ($\alpha_{1}$) for CH$_\mathrm{4}$ from compressibility data.
-
-	\noindent\textbf{Solution.}\\
-
-	To estimate the second Virial coefficient 
-
-
-
-
-\end{mdframed}
 
 \subsubsection*{Cubic Equations of State}
 Polynomials equations that are cubic in molar (or specific) volume $v$ are the simplest equations of state that can describe both liquid and vapor behavior.
