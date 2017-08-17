@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 AUG 2017 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2017 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -634,16 +634,21 @@ File: ./figs/Fig-CubicEOS.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 218.
 (pdftex.def)             Requested size: 469.75502pt x 187.4413pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 235.
- [4 <./figs/Fig-CubicEOS.pdf>] [5]
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 236.
+ [4 <./figs/Fig-CubicEOS.pdf>] [5] [6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 317.
- [6]
+(mdframed)              on input line 320.
+Package mdframed Info: Not enough space on this page on input line 361.
+ [7
+
+]
 (./Notes.bbl
 Missing character: There is no Ì in font phvr7t!
 Missing character: There is no  in font phvr7t!
-) [7] (./Notes.aux)
+) [8
+
+] (./Notes.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -655,7 +660,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  11652 strings out of 493089
  208235 string characters out of 6134842
- 366499 words of memory out of 5000000
+ 365499 words of memory out of 5000000
  15000 multiletter control sequences out of 15000+600000
  24203 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -666,16 +671,17 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (7 pages, 179296 bytes).
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Notes.pdf (8 pages, 188338 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 158 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
