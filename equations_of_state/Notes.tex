@@ -202,9 +202,30 @@ The Virial coefficients are given by:
   & \vdots &
 \end{eqnarray*}
 
+\clearpage
+
 \begin{mdframed}[backgroundcolor=lgray]
   \noindent\textbf{Example}: Estimate the second Virial coefficient $\alpha_{1}$ as a function of temperature from CH$_{\mathrm{4}}$ compressibility data.
+
+	\vspace{0.2in}
+
+	\noindent\textbf{Solution}:
+	Keeping up to first order term, the compressibility factor as a function of pressure gives:
+	\begin{equation}
+		Z = 1 + \alpha^{\prime}_{1}P
+	\end{equation}We can estimate $\alpha^{\prime}_{1}$ from the derivative of the power series expansion;
+	the coefficient $\alpha^{\prime}_{1}$ is the slope of the compressibility  
+
+	Differentiating the Z pressure power series with respect to pressure gives:
+	\begin{equation}
+		\frac{dZ}{dP} = \sum_{i=0}^{\infty}i\cdot\alpha^{\prime}_{i}P^{i-1}
+	\end{equation}
+
+
+
 \end{mdframed}
+
+\clearpage
 
 \subsubsection*{Cubic Equations of State}
 Polynomials equations that are cubic in molar (or specific) volume $v$ are the simplest equations of state that can describe both liquid and vapor behavior.
