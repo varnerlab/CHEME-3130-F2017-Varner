@@ -61,6 +61,10 @@
 	\renewcommand\headrulewidth{1pt}}
 \pagestyle{proposal}
 
+\usepackage{mdframed}
+\definecolor{lgray}{rgb}{0.92,0.92,0.92}
+\definecolor{lsalmon}{rgb}{1.0,0.63,0.48}
+
 % Single space'd bib -
 \setlength\bibsep{0pt}
 
@@ -95,6 +99,28 @@
 
 \setcounter{page}{1}
 
+\begin{mdframed}[backgroundcolor=lgray]
+
+	\subsection*{Introduction}
+	Thermodynamics is the study of the physical and energetic properties of pure materials and mixtures of materials, and how we can exploit these properties for technological or societal benefit. Thermodynamics is at the heart of chemical engineering applications ranging from traditional process engineering to biology and medicine. In this class, we will learn the theoretical basis of thermodynamics, and will apply this understanding to practical problems in chemical and biomolecular engineering.
+
+	\vspace{0.1in}
+	\subsection*{Student outcomes}
+	At the end of this lecture module, students will be able to:
+	\begin{itemize}
+	  \item[O$_1$]{Describe the total energy balance equation and first law of thermodynamics for an open and closed system}
+	  \item[O$_2$]{Describe the constant pressure and constant volume heat capacity}
+		\item[O$_3$]{Describe the thermodynamic state function called enthalpy $H$:
+		\begin{equation}
+			H \equiv U+PV
+		\end{equation}where $U$ denotes the internal energy, $P$ denotes the pressure and $V$ denotes the volume.
+		}
+	\end{itemize}
+
+\end{mdframed}
+
+\clearpage
+
 \section*{Introduction}
 Energy is neither created or destroyed. Instead, it is converted from one form to another.
 The first law of thermodynamics governs the pathways by which these energy conversions can occur.
@@ -117,19 +143,6 @@ dm &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\delta{m}_{s}
 $m$ and $m_{s}$ denote the system mass, and the mass of stream $s$ respectively, while $\delta E_{r}$ denotes the heat liberated or consumed by chemical reaction r.
 Lastly, the quantity $\nu_{s}$ denotes a direction parameter for stream $s$; $\nu_{s}$ = 1 if stream $s$ enters the system, while $\nu_{s}$ = -1 if stream $s$ exits the system.
 
-\paragraph*{What is $d\left(\cdot\right)$ versus $\delta\left(\cdot\right)$?}
-A curious feature of Eqn \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} is the $d\left(\cdot\right)$ versus the $\delta\left(\cdot\right)$ operators;
-the $d\left(\cdot\right)$ operator denotes an \textit{exact} differential, while $\delta\left(\cdot\right)$ denotes an \textit{inexact} differential.
-We'll talk more about this later, but an easy way to think about the difference between these operators is that exact differentials describe changes in system quantities,
-while inexact differentials describes actions taken on the system (adding mass, adding heat etc).
-Mathematically, integrals of exact differentials take the form:
-\begin{equation}
-\Delta x = \int_{x_{1}}^{x_{2}}dx
-\end{equation}while integrals of inexact differentials are given by:
-\begin{equation}
-x = \int \delta x
-\end{equation}
-
 The differential energy and mass balance equations given by Eqn. \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} can be converted to
 the more familiar rate based balances by dividing both sides by a time window $\Delta{t}$ and allowing the window to shrink to zero ($\Delta{t}\rightarrow{0}$):
 \begin{equation}
@@ -150,8 +163,6 @@ Putting these ideas together, we can write the general macroscopic energy and ma
 \end{eqnarray}
 
 \section*{What is work in a thermodynamic system?}
-
-\paragraph*{Work in a closed system.}
 Let's begin by discussing expansion work in a \textit{closed} system (no exchange of material between the system and the surroundings).
 In physics, a force does work if, when acting on a body, there is a displacement of the point of application in the direction of the force.
 Work can be expressed by the relationship:
@@ -179,12 +190,12 @@ We can rewrite the force vector (and similarly the displacement vector) in terms
 \end{equation}because we know that $\left(\mathbf{e}_{i},\mathbf{e}_{i}\right)$ = 1, and all other cases equal zero.
 
 \begin{figure*}[!ht]\centering
-\includegraphics[width=0.60\textwidth]{./figs/WorkReversible.pdf}
+\includegraphics[width=0.90\textwidth]{./figs/WorkReversible.pdf}
 \caption{Schematic of isothermal expansion work for a closed system for finite (irreversible) and hypothetically infinitesimal (reversible) changes in the external pressure.
 }\label{fig-expansion-work-schematic}
 \end{figure*}
 
-We'll typically focus on \textit{reversible} pressure-volume expansion work shown schematically in Fig. \ref{fig-expansion-work-schematic}.
+We'll typically focus on \textit{reversible} pressure-volume expansion work (Fig. \ref{fig-expansion-work-schematic}).
 Imagine we have an isothermal chamber filled with an ideal gas at temperature T$_{1}$ that is being compressed by a weightless, frictionless piston loaded with total mass $M$.
 At equilibrium, the gravitational external force pushing down on the piston $F_{e}$ will be counterbalanced by the force of the gas molecules hitting the piston, $F_{sys}$.
 Force is related to pressure through an area, in this case the cross sectional area of the piston $A_{\perp}$, thus at equilibrium:
@@ -202,8 +213,15 @@ However, the product $A_{\perp}ds_{2}$ describes the displacement of an area, wh
 \begin{equation}\label{eqn:work-equation}
 W = - \int P_{e}dV
 \end{equation}
-Let's remove one of the weights, consider the case shown on the left of Fig. \ref{fig-expansion-work-schematic}.
-Initially, the system is at rest and the pressures are equal.
+
+\begin{wrapfigure}{l}{0.55\textwidth}
+\includegraphics[width=0.54\textwidth]{./figs/WorkArea.pdf}
+\caption{Schematic of the work generated by irreversible (left) and reversible (right) isothermal expansion of an ideal gas.
+Reversible work generates the maximum possible work, but is a hypothetical upper bound.}\label{fig-expansion-work-area}
+\end{wrapfigure}
+
+Let's remove one of the finite weights (Fig. \ref{fig-expansion-work-schematic}A).
+Initially, the system is at rest and the internal and external pressures are equal.
 However, when we remove a finite weight, there will be a mismatch between the system and surrounding pressure ($P_{sys}>P_{e}$)
 causing the piston to accelerate upwards. Eventually the pressures will equilibrate, and the piston will come to rest.
 This type of expansion work is called \textit{irreversible} (perhaps a better term would be non-static or non-equilibrium work).
@@ -217,23 +235,18 @@ to estimate the relationship the system pressure and volume. Evaluating the inte
 \begin{equation}\label{eqn:isothermal-reversible-expansion}
 W = - nRT_{1}\ln\frac{V_{2}}{V_{1}}
 \end{equation}
-\begin{wrapfigure}{l}{0.50\textwidth}
-\includegraphics[width=0.49\textwidth]{./figs/WorkArea.pdf}
-\caption{Schematic of the work generated by irreversible (left) and reversible (right) isothermal expansion of an ideal gas.
-Reversible work generates the maximum possible work, but is a hypothetical upper bound.}\label{fig-expansion-work-area}
-\end{wrapfigure}
-
-Another way to think about expansion work is as an area under a curve.
-From the definition Eqn \eqref{eqn:work-equation}, we see that work is also equal to the area under the curve in the P-V plane (Fig \ref{fig-expansion-work-area}).
-Thus, finite changes in the opposing pressure (no longer in equilibrium with the surroundings) leads to jumps in the P-V plane (and missed work).
+Expansion work is also the area under the curve in the P-V plane (Fig \ref{fig-expansion-work-area}).
+Thus, finite changes in the opposing pressure (no longer in equilibrium with the surroundings) leads to jumps in the P-V plane (and lost work).
 On the other hand, infinitesimally small changes in the surrounding pressure leads to a smooth expansion and the maximum possible work.
-While reversible expansions are not real, we'll typically assume reversible behavior with the understanding that we are estimating the upper bound of system performance.
+Reversible expansions are not real, yet we'll often assume reversible behavior the upper bound of system performance.
 
-\paragraph*{Work in an open system.}
-For an open system, we have \emph{shaft} and \emph{flow} work:
+
+Now lets consider work in an open system.
+For an open system, we have both \emph{shaft} and \emph{flow} work:
 \begin{equation}
 	\dot{W} = \dot{W}_{s} + \dot{W}_{f}
-\end{equation}Shaft work $\dot{W}_{s}$ describes mechanically useful work, while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
+\end{equation}
+Shaft work $\dot{W}_{s}$ describes mechanically useful work, while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
 Thus, for an open system the total work is given by:
 \begin{equation}\label{eqn:open-work}
 	\dot{W} = \dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(Pv\right)_{s}\dot{m}_{s}
@@ -241,12 +254,12 @@ Thus, for an open system the total work is given by:
 Substituting Eqn. \eqref{eqn:open-work} into the energy balance Eqn. \eqref{eqn:general-open-balance} gives:
 \begin{equation}
 	\frac{d}{dt}\left[m\left(u+e_{K}+e_{P}\right)\right]\Bigr|_{sys} = \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left\{\left(Pv\right)_{s}+e_{s}\right\}\dot{m}_{s}+ \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
-\end{equation}If we collect terms and define a new thermodynamic quantity called the enthalpy $h$ ([J/mol] or [J/mass]) for stream j:
+\end{equation}If we collect terms and define a new thermodynamic quantity called the specific enthalpy $h$ ([J/mol] or [J/mass]) for stream j:
 \begin{equation}
 	h_{j} = u_{j} + \left(Pv\right)_{j}
 \end{equation}we arrive at the total macroscopic energy balance for an open system:
 \begin{eqnarray}
-	\frac{d}{dt}\left[m\left(u+e_{K}+e_{P}\right)\right]\Bigr|_{sys} &=& \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(h+e_{K}+e_{P}\right)_{s}\dot{m}_{s} + \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\
+	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(h+e_{K}+e_{P}\right)_{s}\dot{m}_{s} + \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\
 	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray}
 
@@ -426,7 +439,8 @@ At time = 0, the valve is opened an the gas from container A expands into contai
 \end{wrapfigure}
 
 \subsection*{Does the internal energy of a material change with the volume of the container?}
-Theoretically, the internal energy of a material may also be a function of the volume of the system. This is governed by the partial derivative $\left(\partial{U}/\partial{V}\right)_{T}$ in
+Theoretically, the internal energy of a material may also be a function of the volume of the system.
+This is governed by the partial derivative $\left(\partial{U}/\partial{V}\right)_{T}$ in
 our internal energy expansion. However, unlike heat capacity, $\left(\partial{U}/\partial{V}\right)_{T}$ is not as easy to measure experimentally.
 The classic experimental technique to measure this quantity is called a \textit{Joule~free~expansion} (Fig. \ref{fig-joule-expansion}).
 In this experiment, two identical containers, separated by a valve, are immersed in a constant temperature water bath.
@@ -449,5 +463,18 @@ We also know that:
 	\left(\frac{\partial{U}}{\partial{V}}\right)_{T} = 0
 \end{equation}Equation \eqref{eqn:joule-expansion-result} says that the internal energy of a material is \textit{not} a function of volume. This finding is exactly true for an
 ideal gas (since we derived the functional form for the internal energy), however, it is not true for a real gas (it usually a small positive value for real gases).
+
+\paragraph*{What is $d\left(\cdot\right)$ versus $\delta\left(\cdot\right)$?}
+A curious feature of Eqn \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} is the $d\left(\cdot\right)$ versus the $\delta\left(\cdot\right)$ operators;
+the $d\left(\cdot\right)$ operator denotes an \textit{exact} differential, while $\delta\left(\cdot\right)$ denotes an \textit{inexact} differential.
+We'll talk more about this later, but an easy way to think about the difference between these operators is that exact differentials describe changes in system quantities,
+while inexact differentials describes actions taken on the system (adding mass, adding heat etc).
+Mathematically, integrals of exact differentials take the form:
+\begin{equation}
+\Delta x = \int_{x_{1}}^{x_{2}}dx
+\end{equation}while integrals of inexact differentials are given by:
+\begin{equation}
+x = \int \delta x
+\end{equation}
 
 \end{document}
