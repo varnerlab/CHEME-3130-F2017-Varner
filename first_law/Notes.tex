@@ -102,7 +102,9 @@
 \begin{mdframed}[backgroundcolor=lgray]
 
 	\subsection*{Introduction}
-	Thermodynamics is the study of the physical and energetic properties of pure materials and mixtures of materials, and how we can exploit these properties for technological or societal benefit. Thermodynamics is at the heart of chemical engineering applications ranging from traditional process engineering to biology and medicine. In this class, we will learn the theoretical basis of thermodynamics, and will apply this understanding to practical problems in chemical and biomolecular engineering.
+	Thermodynamics is the study of the physical and energetic properties of pure materials and mixtures of materials, and how we can exploit these properties for technological or societal benefit.
+	Thermodynamics is at the heart of chemical engineering applications ranging from traditional process engineering to biology and medicine.
+	In this class, we will learn the theoretical basis of thermodynamics, and will apply this understanding to practical problems in chemical and biomolecular engineering.
 
 	\vspace{0.1in}
 	\subsection*{Student outcomes}
@@ -158,7 +160,7 @@ e = u + \frac{1}{2}s_{j}^{2} + gz
 \end{equation}The total energy of any stream can also be represented as the sum of the internal, kinetic and potential energies of the molecules in that stream.
 Putting these ideas together, we can write the general macroscopic energy and mass balances as:
 \begin{eqnarray}\label{eqn:general-open-balance}
-	\frac{d}{dt}\left[m\left(u+e_{K}+e_{P}\right)\right]\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(u_{s}+gz_{s}+\frac{1}{2}s_{s}^{2}\right)\dot{m}_{s}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\\label{eqn:total-mass-balance}
+	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(u_{s}+gz_{s}+\frac{1}{2}s_{s}^{2}\right)\dot{m}_{s}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\\label{eqn:total-mass-balance}
 	\frac{dm}{dt} = \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray}
 
@@ -198,10 +200,10 @@ We can rewrite the force vector (and similarly the displacement vector) in terms
 We'll typically focus on \textit{reversible} pressure-volume expansion work (Fig. \ref{fig-expansion-work-schematic}).
 Imagine we have an isothermal chamber filled with an ideal gas at temperature T$_{1}$ that is being compressed by a weightless, frictionless piston loaded with total mass $M$.
 At equilibrium, the gravitational external force pushing down on the piston $F_{e}$ will be counterbalanced by the force of the gas molecules hitting the piston, $F_{sys}$.
-Force is related to pressure through an area, in this case the cross sectional area of the piston $A_{\perp}$, thus at equilibrium:
+Force is related to pressure through an area, in this case the cross sectional area of the piston $A_{\perp}$:
 \begin{equation}
 F_{sys}/A_{\perp} - F_{e}/A_{\perp} = 0
-\end{equation}or $P_{sys} = P_{e}$.
+\end{equation}or $P_{sys} = P_{e}$ at equilibrium.
 Substituting the pressure into the differential work expression Eqn \eqref{eqn:differential-work} gives:
 \begin{equation}\label{eqn:delta-w-almost}
 \delta W = - P_{e}A_{\perp}ds_{2}
@@ -220,55 +222,51 @@ W = - \int P_{e}dV
 Reversible work generates the maximum possible work, but is a hypothetical upper bound.}\label{fig-expansion-work-area}
 \end{wrapfigure}
 
-Let's remove one of the finite weights (Fig. \ref{fig-expansion-work-schematic}A).
+Suppose we remove one of the finite weights on top of the piston (Fig. \ref{fig-expansion-work-schematic}A).
 Initially, the system is at rest and the internal and external pressures are equal.
 However, when we remove a finite weight, there will be a mismatch between the system and surrounding pressure ($P_{sys}>P_{e}$)
 causing the piston to accelerate upwards. Eventually the pressures will equilibrate, and the piston will come to rest.
 This type of expansion work is called \textit{irreversible} (perhaps a better term would be non-static or non-equilibrium work).
 When we were at equilibrium we knew $P_{sys}$, however, in between the equilibrium states for an irreversible expansion we do not know the system pressure.
-Imagine instead that we do a hypothetical expansion in which we break the same weight $M$ into tiny particles of size $dM$, and remove a single particle at a time. This type of expansion is called \textit{reversible} (perhaps a better name would equilibrium or static work).
-In this case, the equilibrium assumption remains approximately true, and at each hypothetical stage of the expansion $P_{sys}\simeq P_{e}$, thus:
-\begin{equation}
-W = - \int_{1}^{2} \frac{nRT}{V}dV
-\end{equation}where we used the the ideal gas law $PV - nRT = 0$
-to estimate the relationship the system pressure and volume. Evaluating the integral between state 1 (the start state) and some state 2 gives:
+Imagine instead that we do a hypothetical expansion in which we break the same weight $M$ into tiny particles of size $dM$, and remove a single particle at a time.
+This type of expansion is called \textit{reversible} (perhaps a better name would equilibrium or static work).
+In this case, the equilibrium assumption remains approximately true, and at each hypothetical stage of the expansion $P_{sys}\simeq P_{e}$.
+If the working fluid in the system were an ideal gas (a simple equation of state) valid for only low pressures, the work expression becomes:
 \begin{equation}\label{eqn:isothermal-reversible-expansion}
-W = - nRT_{1}\ln\frac{V_{2}}{V_{1}}
-\end{equation}
+W = - \int_{1}^{2} \frac{nRT}{V}dV = - nRT_{1}\ln\frac{V_{2}}{V_{1}}
+\end{equation}where we used the the ideal gas law $P_{e}V - nRT = 0$
 Expansion work is also the area under the curve in the P-V plane (Fig \ref{fig-expansion-work-area}).
 Thus, finite changes in the opposing pressure (no longer in equilibrium with the surroundings) leads to jumps in the P-V plane (and lost work).
 On the other hand, infinitesimally small changes in the surrounding pressure leads to a smooth expansion and the maximum possible work.
 Reversible expansions are not real, yet we'll often assume reversible behavior the upper bound of system performance.
 
-
-Now lets consider work in an open system.
-For an open system, we have both \emph{shaft} and \emph{flow} work:
+The rate of total work in an open system is the sum of two types of work, \emph{shaft} and \emph{flow} work:
 \begin{equation}
-	\dot{W} = \dot{W}_{s} + \dot{W}_{f}
+	\dot{W} = \dot{W}_{sh} + \dot{W}_{f}
 \end{equation}
-Shaft work $\dot{W}_{s}$ describes mechanically useful work, while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
-Thus, for an open system the total work is given by:
+Shaft work $\dot{W}_{sh}$ is the rate of generation of mechanically useful work (shaft work), while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
+Thus, for an open system the total rate of work is given by:
 \begin{equation}\label{eqn:open-work}
-	\dot{W} = \dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(Pv\right)_{s}\dot{m}_{s}
+	\dot{W} = \dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(Pv\right)_{s}\dot{m}_{s}
 \end{equation}where $P_{s}$ denotes the pressure of stream s, and $v_{s}$ denotes specific volume (e.g., L/kg or L/mol) of stream s.
 Substituting Eqn. \eqref{eqn:open-work} into the energy balance Eqn. \eqref{eqn:general-open-balance} gives:
 \begin{equation}
-	\frac{d}{dt}\left[m\left(u+e_{K}+e_{P}\right)\right]\Bigr|_{sys} = \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left\{\left(Pv\right)_{s}+e_{s}\right\}\dot{m}_{s}+ \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
+	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\Bigl)\right]\Bigr|_{sys} = \dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left\{\left(Pv\right)_{s}+e_{s}\right\}\dot{m}_{s}+ \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
 \end{equation}If we collect terms and define a new thermodynamic quantity called the specific enthalpy $h$ ([J/mol] or [J/mass]) for stream j:
 \begin{equation}
-	h_{j} = u_{j} + \left(Pv\right)_{j}
+	h_{j} \equiv u_{j} + \left(Pv\right)_{j}
 \end{equation}we arrive at the total macroscopic energy balance for an open system:
 \begin{eqnarray}
-	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(h+e_{K}+e_{P}\right)_{s}\dot{m}_{s} + \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\
+	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(h+e_{K}+e_{P}\right)_{s}\dot{m}_{s} + \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\
 	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray}
 
-\subsection*{Derivation of the first law of thermodynamics for a closed system.}
+\subsection*{The first law of thermodynamics for a closed system.}
 Let's begin by simplifying the differential energy and mass balances; consider a \textit{closed} system, with no chemical reactions consisting of a pure working fluid that obeys the general equation of state:
 \begin{equation}
-	\mathcal{F}\left(P,V,T,N\right) = 0
-\end{equation}
-In a closed system, $\delta{m}_{s}$ = 0 for all streams, and no chemical reactions says that $\sum_{r=1}^{\mathcal{R}}\delta E_{r}$ = 0. Thus, our energy and material balances reduce to:
+	\mathcal{F}\left(P,V,T,n\right) = 0
+\end{equation}Lets also assume we can ignore changes in the potential and kinetic energy.
+In a closed system, $\delta{m}_{s}$ = 0 for all streams ($\forall{s})$, and no chemical reactions says that $\sum_{r=1}^{\mathcal{R}}\delta E_{r}$ = 0. Thus, our energy and material balances reduce to:
 \begin{eqnarray}\label{eqn:energy-balance-precursor-internal}
 d\left(mu\right)\Bigr|_{sys} &=& \delta{Q}+\delta{W}\\\label{eqn:material-balance-precursor-internal}
 dm &=& 0
@@ -276,17 +274,10 @@ dm &=& 0
 Expanding the differential on the left hand side of the energy balance leads to:
 \begin{equation}
 md\left(u\right)\Bigr|_{sys}+ud\left(m\right)\Bigr|_{sys} = \delta{Q}+\delta{W}
-\end{equation}We know that $dm$ = 0 (closed system), so the energy balance reduces to:
+\end{equation}However, we know that $dm$ = 0 (closed system), so the energy balance further reduces to:
 \begin{equation}\label{eqn:almost-first-law}
 dU = \delta{Q}+\delta{W}
-\end{equation}where we have dropped the explicit system reference and absorbed the mass. Eqn \eqref{eqn:almost-first-law} is the differential form of the \textit{first law of thermodynamics}.
-We can derive the difference form by integrating both side of Eqn. \eqref{eqn:almost-first-law} from state 1 to 2 which gives:
-\begin{equation}
-\Delta{U} = Q + W
-\end{equation}or on a specific basis:
-\begin{equation}
-\Delta{u} = q + w
-\end{equation}
+\end{equation}where we have dropped the explicit system reference and absorbed the mass.
 Solving for $\delta{Q}$ and substituting our definition of PV-work
 \begin{equation}
 \delta{W} = - PdV
@@ -295,22 +286,83 @@ yields:
 \begin{equation}\label{eqn:first-law-closed-system-differential}
 	\delta{Q} = dU + PdV
 \end{equation}where $P$ denotes the system pressure (assumed to be equilibrium with the surroundings) and V denotes the volume of the system.
+Eqn \eqref{eqn:first-law-closed-system-differential} is the differential form of the \textit{first law of thermodynamics} for a closed system.
+
+\subsection*{The first law of thermodynamics for an open system.}
+Let's begin by simplifying the open time-dependent mass and energy balance equations; assume no chemical reactions, and the change in kinetic and potential energy in the system and all streams is negligible.
+These assumptions applied to the mass and energy balances give:
+\begin{eqnarray}
+	\frac{d}{dt}\Bigl[mu\Bigl]\Bigr|_{sys} &=& \dot{Q}+\dot{W}_{s} + \sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\dot{m}_{s}\\
+	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
+\end{eqnarray}
+This system of equations is the time dependent first law of thermodynamics (in the absence of chemical reactions).
+However, often we are concerned with processes at steady state;
+if the system is at steady state, the time derivatives vanish leaving the steady state open first law of thermodynamics:
+\begin{eqnarray}
+	\dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\dot{m}_{s} & = & 0 \\
+	\sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s} & = & 0
+\end{eqnarray}
+
+\clearpage
+
+\begin{mdframed}[backgroundcolor=lgray]
+\noindent\textbf{Example}: Consider a steady-state two stage flow calorimeter with a resistance heating element in the first stage (inlet or $1$) connected with a measurement unit at the second stage (outlet or $2$).
+Liquid water enters the heater stage at T$_{\mathrm{1}}$ = 0$^{\mathrm{o}}$C and exists the measurement unit (as a vapor) at T$_{\mathrm{2}}$ = 300$^{\mathrm{o}}$C.
+The following data were taken from the inlet and outlet of the calorimeter: $\dot{m}_{1}$ = 4.15 g s$^{\mathrm{-1}}$, T$_{\mathrm{1}}$ = 0$^{\mathrm{o}}$C, T$_{\mathrm{2}}$ = 300$^{\mathrm{o}}$C,
+P$_{\mathrm{2}}$ = 3 bar and $\dot{Q}$ = 12,740 W. The liquid water is completely vaporized in this process. Calculate the specific enthalpy of steam at the outlet of the measurement unit $h_{2}$.
+Assume no shaft work, insulated pipes and process units, and negligible changes in the kinetic and potential energy.
+
+\vspace{0.25in}
+\noindent\textbf{Solution}: Starting from the steady-state open first law equation:
+\begin{equation}
+	\dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\dot{m}_{s}  =  0
+\end{equation}we can begin throwing out terms. First, $\dot{W}_{sh}$ = 0 (from the problem statement).
+Next, we have two streams, so $\mathcal{S}$ = 2 with $\nu_{1}$ = 1 and $\nu_{2}$ = -1 from the process diagram.
+Thus, the open first law equation for this problem is given by:
+\begin{equation}
+	\dot{Q}+h_{1}\dot{m}_{1}-h_{2}\dot{m}_{2} = 0
+\end{equation}However, we know the calorimeter unit is at steady-state, which implies $\dot{m}_{1}=\dot{m}_{2}\equiv\dot{m}$, thus:
+\begin{equation}
+	\dot{Q} = \dot{m}\left(h_{2} - h_{1}\right)
+\end{equation}Solving for the enthalpy at the outlet gives:
+\begin{equation}
+	h_{2} = h_{1}+\frac{\dot{Q}}{\dot{m}}
+\end{equation}From the steam tables, $h_{1}$ = 0, which leaves:
+\begin{equation}
+	h_{2} = \left(12,740~\mathrm{J~s^{-1}}\right)/\left(4.15~\mathrm{g~s^{-1}}\right) = 3,070~\mathrm{J~g^{-1}}
+\end{equation}
+\end{mdframed}
+
+\clearpage
+
+
+
+% We can derive the difference form by integrating both side of Eqn. \eqref{eqn:almost-first-law} from state 1 to 2 which gives:
+% \begin{equation}
+% \Delta{U} = Q + W
+% \end{equation}or on a specific basis (per unit mass or mol):
+% \begin{equation}
+% \Delta{u} = q + w
+% \end{equation}
+
 
 \subsection*{Derivation of general heat capacity relationships.}
-Imagine that we have a function that describes how the internal energy of a system varies with other thermodynamic states $x_{1},x_{2},\hdots,x_{N}$:
+Imagine that we have a function that describes how the internal energy of a system $U(\cdot)$ varies with other thermodynamic states $x_{1},x_{2},\hdots,x_{N}$:
 \begin{equation}
 	U\left(x_{1},x_{2},\hdots,x_{N}\right) = 0
 \end{equation}
-We can take the \emph{total~differential} of of internal energy equation:
+We can take the \emph{total~differential} of the internal energy equation:
 \begin{equation}
 	dU = \sum_{j = 1}^{N}\left(\frac{\partial{U}}{\partial{x_{j}}}\right)_{x_{1},x_{2},\hdots,x_{N},j}dx_{j}
-\end{equation}and substitute this into into Eqn. \eqref{eqn:first-law-closed-system-differential} to arrive at:
+\end{equation}and substitute this into Eqn. \eqref{eqn:first-law-closed-system-differential} to arrive at:
 \begin{equation}\label{eqn:general-change-heat-balance}
-	\delta{Q} = \sum_{j = 1}^{N}\left(\frac{\partial{U}}{\partial{x_{j}}}\right)\Bigr|_{x_{1},x_{2},\hdots,x_{N},j}dx_{j} + pdV
-\end{equation}Eqn. \eqref{eqn:general-change-heat-balance} is a completely general equation that relates the change in heat ($\delta{Q}$) to
-the equation of state for the internal energy of the system we are studying. For single component systems, the states $x_{1},x_{2},\hdots,x_{N}$ are combinations of
-four variables, temperature, pressure, volume and abundance (the number of particles in the system). Since we have a closed system, and we have no chemical reactions
-our list of state variable is simply the temperature, pressure and volume. If we specify two of these variables we can calculate the third from the state equation.
+	\delta{Q} = \sum_{j = 1}^{N}\left(\frac{\partial{U}}{\partial{x_{j}}}\right)\Bigr|_{x_{1},x_{2},\hdots,x_{N},j}dx_{j} + PdV
+\end{equation}
+Equation \eqref{eqn:general-change-heat-balance} is a completely general equation that relates the change in heat $\delta{Q}$ to
+the internal energy of the system. For single component systems, the states $x_{1},x_{2},\hdots,x_{N}$ are combinations of
+four variables, temperature, pressure, volume and abundance (the number of particles in the system).
+However, since we have a closed system with no chemical reactions, our state variables are simply the temperature, pressure and volume.
+If we specify two of these variables we can calculate the third from the state equation.
 This leads to three possible system configurations (for a constant abundance system):
 \begin{itemize}
 	\item{$\left(T,V\right)$ systems: If the independent state variables are temperature $T$ and volume $V$, we can the write $dU$ as:
@@ -318,7 +370,7 @@ This leads to three possible system configurations (for a constant abundance sys
 		dU = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left(\frac{\partial{U}}{\partial{V}}\right)_{T}dV
 	\end{equation}which yields a differential energy balance of the form:
 	\begin{equation}\label{eqn:T-V-N-system}
-		\delta{Q} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{T} + p\right]dV
+		\delta{Q} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{T} + P\right]dV
 	\end{equation}}
 
 	\item{$\left(T,P\right)$ systems: If the independent state variables are pressure $P$ and temperature $T$, we can write $dU$ as:
@@ -327,8 +379,8 @@ This leads to three possible system configurations (for a constant abundance sys
 	\end{equation}which yields a differential energy balance of the form:
 	\begin{equation}\label{eqn:T-P-N-system}
 		\delta{Q} = \left[\left(\frac{\partial{U}}{\partial{T}}\right)_{P}+P\left(\frac{\partial{V}}{\partial{T}}\right)_{P}\right]dT +
-		\left[\left(\frac{\partial{U}}{\partial{P}}\right)_{T} + p\left(\frac{\partial{V}}{\partial{P}}\right)_{T}\right]dP
-	\end{equation}where we have assumed:
+		\left[\left(\frac{\partial{U}}{\partial{P}}\right)_{T} + P\left(\frac{\partial{V}}{\partial{P}}\right)_{T}\right]dP
+	\end{equation}where $V\left(T,P\right)$ gives:
 	\begin{equation}
 		dV = \left(\frac{\partial{V}}{\partial{T}}\right)_{P}dT+\left(\frac{\partial{V}}{\partial{P}}\right)_{T}dP
 	\end{equation}}
@@ -338,25 +390,24 @@ This leads to three possible system configurations (for a constant abundance sys
 		dU = \left(\frac{\partial{U}}{\partial{P}}\right)_{V}dP + \left(\frac{\partial{U}}{\partial{V}}\right)_{P}dV
 	\end{equation}which yields a differential energy balance of the form:
 	\begin{equation}
-		\delta{Q} = \left(\frac{\partial{U}}{\partial{P}}\right)_{V}dP + \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{P} + p\right]dV
+		\delta{Q} = \left(\frac{\partial{U}}{\partial{P}}\right)_{V}dP + \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{P} + P\right]dV
 	\end{equation}}
 
 \end{itemize}
 
-\begin{wrapfigure}{r}{0.60\textwidth}
-\includegraphics[width=0.55\textwidth]{./figs/HeatCapacity-eps-converted-to.pdf}
-\caption{Schematic of the experimental setup for a constant volume (top) and a constant pressure (bottom) heat capacity experiment for a pure substance A.}\label{fig-heat-capacity}
-\end{wrapfigure}
+\begin{figure}\center
+	\includegraphics[width=0.75\textwidth]{./figs/HeatCapacity-eps-converted-to.pdf}
+	\caption{Schematic of the experimental setup for a constant volume (top) and a constant pressure (bottom) heat capacity experiment for a pure substance A.}\label{fig-heat-capacity}
+\end{figure}
 
-
-\subsection*{Changes in internal energy at constant volume. Definition of $C_{V}$.}
-Let's assume that we are using a $\left(T,V\right)$ system with a pure substance. When we supply heat at a constant volume (Fig. \ref{fig-heat-capacity}, top),
-Eqn \eqref{eqn:T-V-N-system} reduces to:
+\subsubsection*{Changes in internal energy at constant volume. Definition of $C_{V}$.}
+Let's suppose we have a $\left(T,V\right)$ system with a pure substance.
+When we supply heat at a constant volume (Fig. \ref{fig-heat-capacity}, top), Eqn \eqref{eqn:T-V-N-system} reduces to:
 \begin{equation}
-	\delta{Q} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT
+	\delta{Q}_{V} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT
 \end{equation}where $dV = 0$. If we divide both sides by $dT$, we arrive at an expression which describes how the internal energy changes with temperature:
 \begin{equation}\label{eqn:constant-volume-heat-capacity}
-	C_{V} \equiv \frac{\delta{Q}}{dT} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}
+	C_{V} \equiv \frac{\delta{Q}_{V}}{dT} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}
 \end{equation}where the subscript $V$ denotes the derivatives are calculated at constant volume. The quantity $C_{V}$ is called the constant volume heat capacity.
 The term $\delta{Q}/{dT}$ (and hence the heat capacity) can easily be measured experimentally (Fig \ref{fig-heat-capacity}). If we integrate both sides of
 Eqn. \eqref{eqn:constant-volume-heat-capacity} with respect to temperature, we arrive at:
@@ -365,7 +416,7 @@ Eqn. \eqref{eqn:constant-volume-heat-capacity} with respect to temperature, we a
 \end{equation}Note that $C_{V}$ is typically a strong function of temperature, so if $T_{1}$ and $T_{2}$ span a large temperature range, we \textit{cannot} pull $C_{V}$ out the integral.
 Instead, we have to estimate how $C_{V}$ varies with temperature, for example estimating $C_{V}$ at many different temperatures and then fitting the results to function of temperature.
 
-\subsection*{Changes in internal energy at constant pressure. Definition of $C_{P}$.}
+\subsubsection*{Changes in internal energy at constant pressure. Definition of $C_{P}$.}
 For a constant pressure system, let's start with Eqn. \eqref{eqn:T-P-N-system}. When we supply heat at a constant pressure (Fig. \ref{fig-heat-capacity}, bottom) $dP = 0$,
 which reduces Eqn. \eqref{eqn:T-P-N-system} to:
 \begin{equation}
@@ -373,11 +424,11 @@ which reduces Eqn. \eqref{eqn:T-P-N-system} to:
 \end{equation}If we divide both sides of the constant pressure $\delta{Q}_{P}$ expression by $dT$ we arrive at:
 \begin{equation}\label{eqn:almost-cp}
 	\frac{\delta{Q}_{P}}{dT} = \left(\frac{\partial{U}}{\partial{T}}\right)_{P}+P\left(\frac{\partial{V}}{\partial{T}}\right)_{P}
-\end{equation}The right-hand side of Eqn. \eqref{eqn:almost-cp} is the sum of an internal energy term and a constant pressure expansion term, which is similar to our definition of
-enthalpy:
+\end{equation}The right-hand side of Eqn. \eqref{eqn:almost-cp} is the sum of an internal energy term and a constant pressure expansion term, which is similar to the definition of
+enthalpy from the open energy balance:
 \begin{equation}\label{eqn:enthalpy}
 	H \equiv U + PV
-\end{equation}Computing the total differential of $H$ yields:
+\end{equation}Computing the total differential of $H$ gives:
 \begin{equation}
 	dH = dU + PdV + VdP
 \end{equation}However, we are at constant pressure ($dP = 0$), which reduces the enthalpy differential to:
@@ -396,7 +447,7 @@ from a change in temperature (at a constant pressure):
 \end{equation}Also like the constant volume heat capacity, $C_{P}$ can be a strong function of $T$, thus, we typically cannot pull it out the temperature integral for large changes
 in temperature.
 
-\subsection*{Is there a relationship between $C_{V}$ and $C_{P}$?}
+\subsubsection*{Is there a relationship between $C_{V}$ and $C_{P}$?}
 Intuitively, given the same pure substance and the same heat input, you would expect that there is a relationship between $C_{V}$ and $C_{P}$. To explore this question, let's consider
 the first-law written for a $(T,V)$ system held at a constant pressure $P$:
 \begin{equation}\label{eqn:first-law-T-V-constant-P}
@@ -411,15 +462,17 @@ the first-law written for a $(T,V)$ system held at a constant pressure $P$:
 \begin{equation}\label{eqn:heat-capacity-relationship}
 	C_{P} - C_{V} = \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{T} + P\right]\left(\frac{\partial{V}}{\partial{T}}\right)_{P}
 \end{equation}
-
 Equation \eqref{eqn:heat-capacity-relationship} governs the general relationship between $C_{P}$ and $C_{P}$ for an arbitrary pure material.
 Although we have not (yet) explicitly shown it, the quantity of the right-hand side of Eqn. \eqref{eqn:heat-capacity-relationship} is always greater than zero, thus $C_{P}>{C_{V}}$.
-To work out the exact difference between the heat capacities, we need an equation of state for the material we are exploring.
-Right now, we only have this relationship for an ideal gas. We know that the internal energy of an ideal gas is given by:
+To work out the exact difference between the heat capacities, we need an \textit{equation~of~state} for the material we are exploring.
+
+The only equation of state that we have talked about so far is the ideal gas equation state.
+Thus, lets work out the difference in heat capacities if out working fluid behaved like an ideal gas.
+The internal energy of an ideal gas can be calculated from statistical mechanics and is given by:
 \begin{equation}
-	U = \frac{3}{2}Nk_{B}T
+	U = \frac{3}{2}nk_{B}T
 \end{equation}Thus, the first term on the right side of Eqn. \eqref{eqn:heat-capacity-relationship} vanishes i.e., $\left(\partial{U}/\partial{V}\right)_{T} = 0$ because
-$U$ is only a function of $T$. This leaves us with the volume expansion term:
+$U$ is only a function of $T$ for an ideal gas. This leaves us with the volume expansion term:
 \begin{equation}\label{eqn:CP-CV-relationship-ideal-gas-almost}
 	C_{P} - C_{V} = P\left(\frac{\partial{V}}{\partial{T}}\right)_{P}
 \end{equation}Rearranging the ideal gas law for $V$, and differentiating with respect to temperature $T$ yields:
@@ -430,13 +483,15 @@ $U$ is only a function of $T$. This leaves us with the volume expansion term:
 	C_{P} - C_{V} = nR
 \end{equation}where $n$ denotes the number of mols of ideal gas, and $R$ denotes the ideal gas constant.
 
-\begin{wrapfigure}{l}{0.59\textwidth}
+\clearpage
+
+\begin{figure}\center
 \includegraphics[width=0.58\textwidth]{./figs/JouleExpansion.pdf}
 \caption{Schematic of the experimental apparatus used in a Joule free expansion experiment.
 Two identical containers, separated by a valve, are in thermodynamic equilibrium with an insulated water bath initially at temperature $T_{1}$.
 Container A is filled with a gas, while container B is initially empty.
 At time = 0, the valve is opened an the gas from container A expands into container B.}\label{fig-joule-expansion}
-\end{wrapfigure}
+\end{figure}
 
 \subsection*{Does the internal energy of a material change with the volume of the container?}
 Theoretically, the internal energy of a material may also be a function of the volume of the system.
