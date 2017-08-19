@@ -261,6 +261,20 @@ Substituting Eqn. \eqref{eqn:open-work} into the energy balance Eqn. \eqref{eqn:
 	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray}
 
+\paragraph*{Aside: What is $d\left(\cdot\right)$ versus $\delta\left(\cdot\right)$?}
+A curious feature of Eqn \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} is the $d\left(\cdot\right)$ versus the $\delta\left(\cdot\right)$ operators;
+the $d\left(\cdot\right)$ operator denotes an \textit{exact} differential, while $\delta\left(\cdot\right)$ denotes an \textit{inexact} differential.
+We'll talk more about this later, but an easy way to think about the difference between these operators is that exact differentials describe changes in system quantities,
+while inexact differentials describes actions taken on the system (adding mass, adding heat etc).
+Mathematically, integrals of exact differentials take the form:
+\begin{equation}
+\Delta x = \int_{x_{1}}^{x_{2}}dx
+\end{equation}while integrals of inexact differentials are given by:
+\begin{equation}
+x = \int \delta x
+\end{equation}
+
+
 \subsection*{The first law of thermodynamics for a closed system.}
 Let's begin by simplifying the differential energy and mass balances; consider a \textit{closed} system, with no chemical reactions consisting of a pure working fluid that obeys the general equation of state:
 \begin{equation}
@@ -303,16 +317,14 @@ if the system is at steady state, the time derivatives vanish leaving the steady
 	\sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s} & = & 0
 \end{eqnarray}
 
-\clearpage
-
 \begin{mdframed}[backgroundcolor=lgray]
-\noindent\textbf{Example}: Consider a steady-state two stage flow calorimeter with a resistance heating element in the first stage (inlet or $1$) connected with a measurement unit at the second stage (outlet or $2$).
+\noindent\textbf{Example}: Consider a steady-state two stage flow calorimeter with a resistance heating element stage 1 (inlet) connected with a measurement unit in stage 2 (outlet).
 Liquid water enters the heater stage at T$_{\mathrm{1}}$ = 0$^{\mathrm{o}}$C and exists the measurement unit (as a vapor) at T$_{\mathrm{2}}$ = 300$^{\mathrm{o}}$C.
-The following data were taken from the inlet and outlet of the calorimeter: $\dot{m}_{1}$ = 4.15 g s$^{\mathrm{-1}}$, T$_{\mathrm{1}}$ = 0$^{\mathrm{o}}$C, T$_{\mathrm{2}}$ = 300$^{\mathrm{o}}$C,
-P$_{\mathrm{2}}$ = 3 bar and $\dot{Q}$ = 12,740 W. The liquid water is completely vaporized in this process. Calculate the specific enthalpy of steam at the outlet of the measurement unit $h_{2}$.
+The following data were taken from the inlet and outlet of the calorimeter: $\dot{m}_{1}$ = 4.15 g s$^{\mathrm{-1}}$, P$_{\mathrm{2}}$ = 3 bar and $\dot{Q}$ = 12,740 W.
+The liquid water is completely vaporized in this process. Calculate the specific enthalpy of steam at the outlet of the measurement unit $h_{2}$.
 Assume no shaft work, insulated pipes and process units, and negligible changes in the kinetic and potential energy.
 
-\vspace{0.25in}
+\vspace{0.15in}
 \noindent\textbf{Solution}: Starting from the steady-state open first law equation:
 \begin{equation}
 	\dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\dot{m}_{s}  =  0
@@ -518,18 +530,5 @@ We also know that:
 	\left(\frac{\partial{U}}{\partial{V}}\right)_{T} = 0
 \end{equation}Equation \eqref{eqn:joule-expansion-result} says that the internal energy of a material is \textit{not} a function of volume. This finding is exactly true for an
 ideal gas (since we derived the functional form for the internal energy), however, it is not true for a real gas (it usually a small positive value for real gases).
-
-\paragraph*{What is $d\left(\cdot\right)$ versus $\delta\left(\cdot\right)$?}
-A curious feature of Eqn \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} is the $d\left(\cdot\right)$ versus the $\delta\left(\cdot\right)$ operators;
-the $d\left(\cdot\right)$ operator denotes an \textit{exact} differential, while $\delta\left(\cdot\right)$ denotes an \textit{inexact} differential.
-We'll talk more about this later, but an easy way to think about the difference between these operators is that exact differentials describe changes in system quantities,
-while inexact differentials describes actions taken on the system (adding mass, adding heat etc).
-Mathematically, integrals of exact differentials take the form:
-\begin{equation}
-\Delta x = \int_{x_{1}}^{x_{2}}dx
-\end{equation}while integrals of inexact differentials are given by:
-\begin{equation}
-x = \int \delta x
-\end{equation}
 
 \end{document}
