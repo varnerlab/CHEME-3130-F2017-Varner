@@ -478,8 +478,12 @@ Equation \eqref{eqn:heat-capacity-relationship} governs the general relationship
 Although we have not (yet) explicitly shown it, the quantity of the right-hand side of Eqn. \eqref{eqn:heat-capacity-relationship} is always greater than zero, thus $C_{P}>{C_{V}}$.
 To work out the exact difference between the heat capacities, we need an \textit{equation~of~state} for the material we are exploring.
 
-The only equation of state that we have talked about so far is the ideal gas equation state.
-Thus, lets work out the difference in heat capacities if out working fluid behaved like an ideal gas.
+\clearpage
+\begin{mdframed}[backgroundcolor=lgray]
+\noindent\textbf{Example}: Derive the difference between the constant volume and constant pressure heat capacities assuming an ideal gas as the working fluid.
+
+\vspace{0.1in}
+\noindent\textbf{Solution}:
 The internal energy of an ideal gas can be calculated from statistical mechanics and is given by:
 \begin{equation}
 	U = \frac{3}{2}nk_{B}T
@@ -494,8 +498,22 @@ $U$ is only a function of $T$ for an ideal gas. This leaves us with the volume e
 \begin{equation}
 	C_{P} - C_{V} = nR
 \end{equation}where $n$ denotes the number of mols of ideal gas, and $R$ denotes the ideal gas constant.
+\end{mdframed}
 
 \clearpage
+\begin{mdframed}[backgroundcolor=lgray]
+	\noindent\textbf{Example}: 1 mol of air at P = 1 bar and T = 298.15K is compressed to 5 bar and 298.15K by two different mechanically reversible processes:
+	\begin{enumerate}
+		\item[(a)]{Cooling at constant pressure followed by heating at constant volume}
+		\item[(b)]{Heating at constant volume followed by cooling at constant pressure}
+	\end{enumerate}
+	Calculate the heat and work requirements, $\Delta{U}$ and $\Delta{H}$ of the air for each path.
+	The heat capacities for air are given by: $C_{V}$ = 20.78 J mol$^{\mathrm{-1}}$ K$^{\mathrm{-1}}$ and $C_{P}$ = 29.10 J mol$^{\mathrm{-1}}$ K$^{\mathrm{-1}}$.
+	Assume both $C_{V}$ and $C_{P}$ are independent of temperature.
+	Also assume that air can be modeled as a pure ideal gas, with a molar volume $v$ = 0.02479 m$^{\mathrm{3}}$ mol$^{\mathrm{-1}}$ at T = 298.15K and P = 1 bar.
+\end{mdframed}
+\clearpage
+
 
 \begin{figure}\center
 \includegraphics[width=0.58\textwidth]{./figs/JouleExpansion.pdf}
