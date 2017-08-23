@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 AUG 2017 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 AUG 2017 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,12 +582,12 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 131.
 
-<./figs/EnergySchematic.pdf, id=13, 824.07875pt x 413.545pt>
+<./figs/EnergySchematic.pdf, id=13, 708.6475pt x 399.4925pt>
 File: ./figs/EnergySchematic.pdf Graphic file (type pdf)
 
 <use ./figs/EnergySchematic.pdf>
 Package pdftex.def Info: ./figs/EnergySchematic.pdf used on input line 135.
-(pdftex.def)             Requested size: 375.80544pt x 188.59235pt.
+(pdftex.def)             Requested size: 469.75502pt x 264.82405pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 137.
 
@@ -600,14 +600,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2
 
  <./figs/EnergySchematic.pdf>] [3]
-<./figs/WorkReversible.pdf, id=42, 766.865pt x 459.7175pt>
+<./figs/WorkReversible.pdf, id=46, 766.865pt x 459.7175pt>
 File: ./figs/WorkReversible.pdf Graphic file (type pdf)
 
 <use ./figs/WorkReversible.pdf>
 Package pdftex.def Info: ./figs/WorkReversible.pdf used on input line 195.
 (pdftex.def)             Requested size: 422.77664pt x 253.44867pt.
  [4 <./figs/WorkReversible.pdf>]
-<./figs/WorkArea.pdf, id=72, 755.82375pt x 572.1375pt>
+<./figs/WorkArea.pdf, id=76, 755.82375pt x 572.1375pt>
 File: ./figs/WorkArea.pdf Graphic file (type pdf)
 
 <use ./figs/WorkArea.pdf>
@@ -623,7 +623,7 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
  [9
 
 ]
-<./figs/HeatCapacity-eps-converted-to.pdf, id=164, 813.0375pt x 775.89874pt>
+<./figs/HeatCapacity-eps-converted-to.pdf, id=168, 813.0375pt x 775.89874pt>
 File: ./figs/HeatCapacity-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/HeatCapacity-eps-converted-to.pdf>
@@ -638,7 +638,7 @@ Package mdframed Info: Not enough space on this page on input line 501.
  [13
 
 ]
-<./figs/Example-PV-Diagram.pdf, id=189, 729.72626pt x 522.95375pt>
+<./figs/Example-PV-Diagram.pdf, id=193, 729.72626pt x 522.95375pt>
 File: ./figs/Example-PV-Diagram.pdf Graphic file (type pdf)
 
 <use ./figs/Example-PV-Diagram.pdf>
@@ -651,7 +651,7 @@ Package mdframed Info: Not enough space on this page on input line 525.
  [14
 
  <./figs/Example-PV-Diagram.pdf>]
-<./figs/JouleExpansion.pdf, id=206, 557.08125pt x 378.41376pt>
+<./figs/JouleExpansion.pdf, id=210, 557.08125pt x 378.41376pt>
 File: ./figs/JouleExpansion.pdf Graphic file (type pdf)
 
 <use ./figs/JouleExpansion.pdf>
@@ -668,7 +668,7 @@ Package pdftex.def Info: ./figs/JouleExpansion.pdf used on input line 530.
 Here is how much of TeX's memory you used:
  11456 strings out of 493089
  206675 string characters out of 6134842
- 262414 words of memory out of 5000000
+ 263414 words of memory out of 5000000
  14808 multiletter control sequences out of 15000+600000
  26059 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -688,10 +688,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (16 pages, 332421 bytes).
+Output written on Notes.pdf (16 pages, 332897 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+ 283 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
