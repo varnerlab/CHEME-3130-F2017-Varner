@@ -124,45 +124,48 @@
 \clearpage
 
 \section*{Introduction}
-Energy is neither created or destroyed. Instead, it is converted from one form to another.
-The first law of thermodynamics governs the pathways by which these energy conversions can occur.
+Imagine that we could decompose a chemical engineering process into a \textit{system} and its \textit{surroundings}.
+The \textit{system} e.g., a reactor or downstream unit such as distillation column can exchange mass and energy with its \textit{surroundings}.
+Collectively the \textit{system} and its \textit{surroundings} is called a \textit{universe}.
+Total energy ($E$) is neither created nor destroyed in a \textit{universe};
+instead, it is converted from one form to another, leading to principle of conservation of energy:
+\begin{equation}
+	\Delta{E}_{\mathrm{universe}} = \Delta{E}_{\mathrm{system}}+\Delta{E}_{\mathrm{surroundings}} = 0
+\end{equation}
+The first law of thermodynamics, which can derived from the conservation of energy principle, governs the pathways by which these energy conversions can occur.
 Suppose we have a general thermodynamic system separated from its surroundings by a permeable boundary (Fig. \ref{fig-energy-schematic}).
-Energy and mass can be transferred into and from the system by passing across this boundary.
-Energy and mass transfer into or from the system leads to changes in the \emph{total} system energy.
-For most systems in chemical engineering, the total energy is the sum of the kinetic, potential and
-internal energy of system.
+Energy and mass can accumulate inside the system, or can be transferred into and from the system by passing across this boundary.
 \begin{figure}[!ht]\center
   \includegraphics[width=1.0\textwidth]{./figs/EnergySchematic.pdf}
   \caption{Schematic of a general system and its surroundings. $\mathcal{S}$ streams enter or exit from the system which can transfer both heat and work with the surroundings.
   $\mathcal{R}$ chemical reactions can act a source or sink of heat for the system.}
   \label{fig-energy-schematic}
 \end{figure}
-Putting these ideas together we can write the \textit{differential} energy and mass balance equations of the form:
+Putting these ideas together we can write \textit{differential} energy and mass balance equations which describe the energy (or mass) inputs and outputs shown in Fig. \ref{fig-energy-schematic}:
 \begin{eqnarray}\label{eqn:energy-balance-precursor}
 d\left(me\right)\Bigr|_{sys} &=& \delta{Q}+\delta{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}e_{s}\delta{m}_{s} + \sum_{r=1}^{\mathcal{R}}\delta E_{r}\\\label{eqn:material-balance-precursor}
 dm &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\delta{m}_{s}
-\end{eqnarray}where $e$ denotes the \textit{total} energy in the system per unit mass (or mol), $e_{s}$ denotes the \textit{total} energy of stream $s$ per unit mass (or mol),
-$m$ and $m_{s}$ denote the system mass, and the mass of stream $s$ respectively, while $\delta E_{r}$ denotes the heat liberated or consumed by chemical reaction r.
+\end{eqnarray}where $e$ denotes the \textit{total} energy in the system per unit mass (or mol), $e_{s}$ denotes the \textit{total} energy of stream $s$ (of $\mathcal{S}$ streams) per unit mass (or mol),
+$m$ and $m_{s}$ denote the system mass, and the mass of stream $s$ respectively, while $\delta E_{r}$ denotes the heat liberated or consumed by chemical reaction r (of $\mathcal{R}$ possible chemical reactions).
 Lastly, the quantity $\nu_{s}$ denotes a direction parameter for stream $s$; $\nu_{s}$ = 1 if stream $s$ enters the system, while $\nu_{s}$ = -1 if stream $s$ exits the system.
 
 The differential energy and mass balance equations given by Eqn. \eqref{eqn:energy-balance-precursor} and \eqref{eqn:material-balance-precursor} can be converted to
 the more familiar rate based balances by dividing both sides by a time window $\Delta{t}$ and allowing the window to shrink to zero ($\Delta{t}\rightarrow{0}$):
-\begin{equation}
-\frac{d}{dt}\left(me\right)\Bigr|_{sys} = \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}e_{s}\dot{m}_{s}+ \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
-\end{equation}where $\dot{Q},\dot{W},\dot{m}_{s}$ denote the rate of heat, work and mass input/output from the system in stream s.
-Thus, the right-hand side describes the rate of accumulation of total energy in the system, while the left-hand side describes the various sources and sinks of total energy.
-For most chemical engineering systems, we'll formulate total energy as the sum of the internal $U$, kinetic $E_{K}$ and potential energies $E_{P}$:
-\begin{equation}
-E = U + \frac{1}{2}ms_{j}^{2} + mgz
-\end{equation} or on a per mass (mol) basis:
+\begin{eqnarray}
+\frac{d}{dt}\left(me\right)\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}e_{s}\dot{m}_{s}+ \sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\
+\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
+\end{eqnarray}where $\dot{Q},\dot{W},\dot{m}_{s}$ denote the rate of heat, work and mass input/output from the system in stream s.
+The left-hand side describes the rate of accumulation of total energy in the system, while the right-hand side describes the various sources and sinks of total energy.
+For most chemical engineering systems, we'll formulate specific total energy as the sum of the internal $u$, kinetic $e_{K}=(1/2)ms_{j}^{2}$ and potential energies $e_{P}=gz$:
 \begin{equation}
 e = u + \frac{1}{2}s_{j}^{2} + gz
-\end{equation}The total energy of any stream can also be represented as the sum of the internal, kinetic and potential energies of the molecules in that stream.
-Putting these ideas together, we can write the general macroscopic energy and mass balances as:
+\end{equation}The specific total energy of any stream can also be represented as the sum of the internal, kinetic and potential energies of the molecules in that stream.
+Putting these ideas together, we can write the general time-dependent macroscopic energy and mass balances as:
 \begin{eqnarray}\label{eqn:general-open-balance}
 	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(u_{s}+gz_{s}+\frac{1}{2}s_{s}^{2}\right)\dot{m}_{s}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\\label{eqn:total-mass-balance}
-	\frac{dm}{dt} = \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
+	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray}
+We'll study how to apply these equations to practical chemical engineering problems for the rest of the semester.
 
 \section*{What is work in a thermodynamic system?}
 Let's begin by discussing expansion work in a \textit{closed} system (no exchange of material between the system and the surroundings).
