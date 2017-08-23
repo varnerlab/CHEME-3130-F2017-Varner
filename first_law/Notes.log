@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 AUG 2017 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 AUG 2017 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,13 +613,16 @@ File: ./figs/WorkArea.pdf Graphic file (type pdf)
 <use ./figs/WorkArea.pdf>
 Package pdftex.def Info: ./figs/WorkArea.pdf used on input line 223.
 (pdftex.def)             Requested size: 253.66455pt x 192.01863pt.
- [5 <./figs/WorkReversible.pdf> <./figs/WorkArea.pdf>] [6] [7]
+ [5 <./figs/WorkReversible.pdf> <./figs/WorkArea.pdf>] [6] [7] [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 323.
- [8] [9]
+(mdframed)              on input line 325.
+Package mdframed Info: Not enough space on this page on input line 351.
+ [9
+
+]
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 383.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 385.
  [10
 
 ]
@@ -628,13 +631,13 @@ File: ./figs/HeatCapacity-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/HeatCapacity-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/HeatCapacity-eps-converted-to.pdf used on input
- line 414.
+ line 416.
 (pdftex.def)             Requested size: 352.31625pt x 336.22275pt.
  [11 <./figs/HeatCapacity-eps-converted-to.pdf>] [12] [13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 485.
-Package mdframed Info: Not enough space on this page on input line 504.
+(mdframed)              on input line 487.
+Package mdframed Info: Not enough space on this page on input line 506.
  [14
 
 ]
@@ -642,12 +645,12 @@ Package mdframed Info: Not enough space on this page on input line 504.
 File: ./figs/Example-PV-Diagram.pdf Graphic file (type pdf)
 
 <use ./figs/Example-PV-Diagram.pdf>
-Package pdftex.def Info: ./figs/Example-PV-Diagram.pdf used on input line 509.
+Package pdftex.def Info: ./figs/Example-PV-Diagram.pdf used on input line 511.
 (pdftex.def)             Requested size: 328.82707pt x 235.6462pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
-Package mdframed Info: Not enough space on this page on input line 528.
+(mdframed)              on input line 516.
+Package mdframed Info: Not enough space on this page on input line 530.
  [15
 
  <./figs/Example-PV-Diagram.pdf>]
@@ -655,7 +658,7 @@ Package mdframed Info: Not enough space on this page on input line 528.
 File: ./figs/JouleExpansion.pdf Graphic file (type pdf)
 
 <use ./figs/JouleExpansion.pdf>
-Package pdftex.def Info: ./figs/JouleExpansion.pdf used on input line 533.
+Package pdftex.def Info: ./figs/JouleExpansion.pdf used on input line 535.
 (pdftex.def)             Requested size: 272.45877pt x 185.07791pt.
  [16
 
@@ -668,7 +671,7 @@ Package pdftex.def Info: ./figs/JouleExpansion.pdf used on input line 533.
 Here is how much of TeX's memory you used:
  11456 strings out of 493089
  206675 string characters out of 6134842
- 267418 words of memory out of 5000000
+ 264418 words of memory out of 5000000
  14808 multiletter control sequences out of 15000+600000
  26059 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -688,7 +691,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (17 pages, 336135 bytes).
+Output written on Notes.pdf (17 pages, 336731 bytes).
 PDF statistics:
  286 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams

@@ -192,7 +192,7 @@ We can rewrite the force vector (and similarly the displacement vector) in terms
 \end{equation}which simplifies to:
 \begin{equation}\label{eqn:differential-work}
 \delta W = \sum_{i} F_{i}ds_{i}
-\end{equation}because we know that $\left(\mathbf{e}_{i},\mathbf{e}_{i}\right)$ = 1, and all other cases equal zero.
+\end{equation}because $\left(\mathbf{e}_{i},\mathbf{e}_{i}\right)$ = 1, and all other cases equal zero.
 
 \begin{figure*}[!ht]\centering
 \includegraphics[width=0.90\textwidth]{./figs/WorkReversible.pdf}
@@ -238,16 +238,16 @@ If the working fluid in the system were an ideal gas (a simple equation of state
 \begin{equation}\label{eqn:isothermal-reversible-expansion}
 W = - \int_{1}^{2} \frac{nRT}{V}dV = - nRT_{1}\ln\frac{V_{2}}{V_{1}}
 \end{equation}where we used the the ideal gas law $P_{e}V - nRT = 0$
-Expansion work is also the area under the curve in the P-V plane (Fig \ref{fig-expansion-work-area}).
+Expansion work can also be thought of as the area under the curve in the P-V plane (Fig \ref{fig-expansion-work-area}).
 Thus, finite changes in the opposing pressure (no longer in equilibrium with the surroundings) leads to jumps in the P-V plane (and lost work).
 On the other hand, infinitesimally small changes in the surrounding pressure leads to a smooth expansion and the maximum possible work.
 Reversible expansions are not real, yet we'll often assume reversible behavior the upper bound of system performance.
 
-The rate of total work in an open system is the sum of two types of work, \emph{shaft} and \emph{flow} work:
+\paragraph*{Work in an open system}~The rate of total work in an open system (an open system can exchange both energy and mass with the surroundings) is the sum of two types of work, \emph{shaft} and \emph{flow} work:
 \begin{equation}
 	\dot{W} = \dot{W}_{sh} + \dot{W}_{f}
 \end{equation}
-Shaft work $\dot{W}_{sh}$ is the rate of generation of mechanically useful work (shaft work), while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
+Shaft work $\dot{W}_{sh}$ is the rate of generation of mechanically useful work, while flow work $\dot{W}_{f}$ is the energy required to push fluid into or from the system.
 Thus, for an open system the total rate of work is given by:
 \begin{equation}\label{eqn:open-work}
 	\dot{W} = \dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}\left(Pv\right)_{s}\dot{m}_{s}
@@ -319,6 +319,8 @@ if the system is at steady state, the time derivatives vanish leaving the steady
 	\dot{Q}+\dot{W}_{sh} + \sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\dot{m}_{s} & = & 0 \\
 	\sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s} & = & 0
 \end{eqnarray}
+
+\clearpage
 
 \begin{mdframed}[backgroundcolor=lgray]
 \noindent\textbf{Example}: Consider a steady-state two stage flow calorimeter with a resistance heating element stage 1 (inlet) connected with a measurement unit in stage 2 (outlet).
@@ -524,7 +526,8 @@ $U$ is only a function of $T$ for an ideal gas. This leaves us with the volume e
 	Also assume air is an ideal gas, with a molar volume $v$ = 0.02479 m$^{\mathrm{3}}$ mol$^{\mathrm{-1}}$ at T = 298.15K and P = 1 bar.
 
 	\vspace{0.1in}
-	\noindent\textbf{Solution}: Let's begin by looking at the blue path in Fig. \ref{fig:example-pv-diagram}.
+	\noindent\textbf{Solution}: Let's begin by looking at the blue path through the hypothetical point $\mathbb{P}_{A}$ in Fig. \ref{fig:example-pv-diagram}.
+	
 \end{mdframed}
 \clearpage
 
