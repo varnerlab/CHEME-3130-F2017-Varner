@@ -527,43 +527,43 @@ $U$ is only a function of $T$ for an ideal gas. This leaves us with the volume e
 
 	\vspace{0.1in}
 	\noindent\textbf{Solution}: Let's begin by looking at the blue path through the hypothetical point $\mathbb{P}_{A}$ in Fig. \ref{fig:example-pv-diagram}.
-	
+
 \end{mdframed}
 \clearpage
 
 
-\begin{figure}\center
-\includegraphics[width=0.58\textwidth]{./figs/JouleExpansion.pdf}
-\caption{Schematic of the experimental apparatus used in a Joule free expansion experiment.
-Two identical containers, separated by a valve, are in thermodynamic equilibrium with an insulated water bath initially at temperature $T_{1}$.
-Container A is filled with a gas, while container B is initially empty.
-At time = 0, the valve is opened an the gas from container A expands into container B.}\label{fig-joule-expansion}
-\end{figure}
-
-\subsection*{Does the internal energy of a material change with the volume of the container?}
-Theoretically, the internal energy of a material may also be a function of the volume of the system.
-This is governed by the partial derivative $\left(\partial{U}/\partial{V}\right)_{T}$ in
-our internal energy expansion. However, unlike heat capacity, $\left(\partial{U}/\partial{V}\right)_{T}$ is not as easy to measure experimentally.
-The classic experimental technique to measure this quantity is called a \textit{Joule~free~expansion} (Fig. \ref{fig-joule-expansion}).
-In this experiment, two identical containers, separated by a valve, are immersed in a constant temperature water bath.
-Container A is filled with a gas, while container B is initially empty. At time = 0, the valve is opened an the gas from container A expands into container B.
-Joule measured the temperature of the water bath \textit{before} he opened the valve, and again after the system was allowed to come to thermal equilibrium.
-There was \textit{no} change in the temperature of the water bath. Let's try and interpret this result using our understanding of energy transfer and the macroscopic total
-energy balance. Starting from the macroscopic energy balance for a closed system in differential form, we have:
-\begin{equation}
-	dU = \delta{Q} + \delta{W}
-\end{equation}While the gas expands from container A into container B, $\delta{W} = 0$ as the gas particles are expanding against zero opposing pressure.
-Additionally, since the temperature of the \textit{finite} water bath was unchanged it follows that $\delta{Q} = 0$, thus $dU = 0$.
-We also know that:
-\begin{equation}
-	dU = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left(\frac{\partial{U}}{\partial{V}}\right)_{T}dV = 0
-\end{equation}However, $dT = 0$ which implies:
-\begin{equation}
-	dU = \left(\frac{\partial{U}}{\partial{V}}\right)_{T}dV = 0
-\end{equation}Since $dV\neq{0}$ (the volume of our system approximately doubled), this means:
-\begin{equation}\label{eqn:joule-expansion-result}
-	\left(\frac{\partial{U}}{\partial{V}}\right)_{T} = 0
-\end{equation}Equation \eqref{eqn:joule-expansion-result} says that the internal energy of a material is \textit{not} a function of volume. This finding is exactly true for an
-ideal gas (since we derived the functional form for the internal energy), however, it is not true for a real gas (it usually a small positive value for real gases).
+% \begin{figure}\center
+% \includegraphics[width=0.58\textwidth]{./figs/JouleExpansion.pdf}
+% \caption{Schematic of the experimental apparatus used in a Joule free expansion experiment.
+% Two identical containers, separated by a valve, are in thermodynamic equilibrium with an insulated water bath initially at temperature $T_{1}$.
+% Container A is filled with a gas, while container B is initially empty.
+% At time = 0, the valve is opened an the gas from container A expands into container B.}\label{fig-joule-expansion}
+% \end{figure}
+%
+% \subsection*{Does the internal energy of a material change with the volume of the container?}
+% Theoretically, the internal energy of a material may also be a function of the volume of the system.
+% This is governed by the partial derivative $\left(\partial{U}/\partial{V}\right)_{T}$ in
+% our internal energy expansion. However, unlike heat capacity, $\left(\partial{U}/\partial{V}\right)_{T}$ is not as easy to measure experimentally.
+% The classic experimental technique to measure this quantity is called a \textit{Joule~free~expansion} (Fig. \ref{fig-joule-expansion}).
+% In this experiment, two identical containers, separated by a valve, are immersed in a constant temperature water bath.
+% Container A is filled with a gas, while container B is initially empty. At time = 0, the valve is opened an the gas from container A expands into container B.
+% Joule measured the temperature of the water bath \textit{before} he opened the valve, and again after the system was allowed to come to thermal equilibrium.
+% There was \textit{no} change in the temperature of the water bath. Let's try and interpret this result using our understanding of energy transfer and the macroscopic total
+% energy balance. Starting from the macroscopic energy balance for a closed system in differential form, we have:
+% \begin{equation}
+% 	dU = \delta{Q} + \delta{W}
+% \end{equation}While the gas expands from container A into container B, $\delta{W} = 0$ as the gas particles are expanding against zero opposing pressure.
+% Additionally, since the temperature of the \textit{finite} water bath was unchanged it follows that $\delta{Q} = 0$, thus $dU = 0$.
+% We also know that:
+% \begin{equation}
+% 	dU = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left(\frac{\partial{U}}{\partial{V}}\right)_{T}dV = 0
+% \end{equation}However, $dT = 0$ which implies:
+% \begin{equation}
+% 	dU = \left(\frac{\partial{U}}{\partial{V}}\right)_{T}dV = 0
+% \end{equation}Since $dV\neq{0}$ (the volume of our system approximately doubled), this means:
+% \begin{equation}\label{eqn:joule-expansion-result}
+% 	\left(\frac{\partial{U}}{\partial{V}}\right)_{T} = 0
+% \end{equation}Equation \eqref{eqn:joule-expansion-result} says that the internal energy of a material is \textit{not} a function of volume. This finding is exactly true for an
+% ideal gas (since we derived the functional form for the internal energy), however, it is not true for a real gas (it usually a small positive value for real gases).
 
 \end{document}
