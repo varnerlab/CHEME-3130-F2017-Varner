@@ -167,7 +167,7 @@ Putting these ideas together, we can write the general time-dependent macroscopi
 \end{eqnarray}
 We'll study how to apply these equations to practical chemical engineering problems for the rest of the semester.
 
-\section*{What is work in a thermodynamic system?}
+\section*{What is thermodynamic work?}
 Let's begin by discussing expansion work in a \textit{closed} system (no exchange of material between the system and the surroundings).
 In physics, a force does work if, when acting on a body, there is a displacement of the point of application in the direction of the force.
 Work can be expressed by the relationship:
@@ -279,7 +279,8 @@ x = \int \delta x
 
 
 \subsection*{The first law of thermodynamics for a closed system.}
-Let's begin by simplifying the differential energy and mass balances; consider a \textit{closed} system, with no chemical reactions consisting of a pure working fluid that obeys the general equation of state:
+Let's begin by simplifying the differential energy and mass balances;
+consider a \textit{closed} system, with no chemical reactions consisting of a pure working fluid that obeys the general equation of state:
 \begin{equation}
 	\mathcal{F}\left(P,V,T,n\right) = 0
 \end{equation}Lets also assume we can ignore changes in the potential and kinetic energy.
@@ -461,12 +462,12 @@ enthalpy from the open energy balance:
 from a change in temperature (at a constant pressure):
 \begin{equation}
 	\Delta{H} = \int_{T_{1}}^{T_{2}}C_{P}dT
-\end{equation}Also like the constant volume heat capacity, $C_{P}$ can be a strong function of $T$, thus, we typically cannot pull it out the temperature integral for large changes
-in temperature.
+\end{equation}Also like the constant volume heat capacity, $C_{P}$ can be a strong function of $T$;
+thus, we typically cannot pull it out the temperature integral for large changes in temperature.
 
 \subsubsection*{Is there a relationship between $C_{V}$ and $C_{P}$?}
-Intuitively, given the same pure substance and the same heat input, you would expect that there is a relationship between $C_{V}$ and $C_{P}$. To explore this question, let's consider
-the first-law written for a $(T,V)$ system held at a constant pressure $P$:
+Intuitively, given the same pure substance and the same heat input, you would expect that there is a relationship between $C_{V}$ and $C_{P}$.
+To explore this question, let's consider the first-law written for a $(T,V)$ system held at a constant pressure $P$:
 \begin{equation}\label{eqn:first-law-T-V-constant-P}
 	\delta{Q}_{P} = \left(\frac{\partial{U}}{\partial{T}}\right)_{V}dT + \left[\left(\frac{\partial{U}}{\partial{V}}\right)_{T} + P\right]dV
 \end{equation}Using our definition of the constant volume heat capacity, we can rewrite Eqn. \eqref{eqn:first-law-T-V-constant-P} as:
@@ -514,7 +515,7 @@ $U$ is only a function of $T$ for an ideal gas. This leaves us with the volume e
 \end{figure}
 
 \begin{mdframed}[backgroundcolor=lgray]
-	\noindent\textbf{Example}: 1 mol of air at P = 1 bar and T = 298.15K is compressed to 5 bar and 298.15K by two different mechanically reversible processes:
+	\noindent\textbf{Challenge example}: 1 mol of air at P = 1 bar and T = 298.15K is compressed to 5 bar and 298.15K by two different mechanically reversible processes:
 	\begin{enumerate}
 		\item[(a)]{Cooling at constant pressure followed by heating at constant volume}
 		\item[(b)]{Heating at constant volume followed by cooling at constant pressure}
@@ -524,9 +525,6 @@ $U$ is only a function of $T$ for an ideal gas. This leaves us with the volume e
 	The heat capacities for air: $C_{V}$ = 20.78 J mol$^{\mathrm{-1}}$ K$^{\mathrm{-1}}$ and $C_{P}$ = 29.10 J mol$^{\mathrm{-1}}$ K$^{\mathrm{-1}}$.
 	Assume both $C_{V}$ and $C_{P}$ are independent of temperature.
 	Also assume air is an ideal gas, with a molar volume $v$ = 0.02479 m$^{\mathrm{3}}$ mol$^{\mathrm{-1}}$ at T = 298.15K and P = 1 bar.
-
-	\vspace{0.1in}
-	\noindent\textbf{Solution}: Let's begin by looking at the blue path through the hypothetical point $\mathbb{P}_{A}$ in Fig. \ref{fig:example-pv-diagram}.
 
 \end{mdframed}
 \clearpage

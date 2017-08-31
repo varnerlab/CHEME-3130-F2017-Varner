@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 AUG 2017 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 AUG 2017 08:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,13 +616,13 @@ Package pdftex.def Info: ./figs/WorkArea.pdf used on input line 223.
  [5 <./figs/WorkReversible.pdf> <./figs/WorkArea.pdf>] [6] [7] [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 325.
-Package mdframed Info: Not enough space on this page on input line 351.
+(mdframed)              on input line 326.
+Package mdframed Info: Not enough space on this page on input line 352.
  [9
 
 ]
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 385.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 386.
  [10
 
 ]
@@ -631,13 +631,13 @@ File: ./figs/HeatCapacity-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/HeatCapacity-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/HeatCapacity-eps-converted-to.pdf used on input
- line 416.
+ line 417.
 (pdftex.def)             Requested size: 352.31625pt x 336.22275pt.
  [11 <./figs/HeatCapacity-eps-converted-to.pdf>] [12] [13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 487.
-Package mdframed Info: Not enough space on this page on input line 506.
+(mdframed)              on input line 488.
+Package mdframed Info: Not enough space on this page on input line 507.
  [14
 
 ]
@@ -645,37 +645,28 @@ Package mdframed Info: Not enough space on this page on input line 506.
 File: ./figs/Example-PV-Diagram.pdf Graphic file (type pdf)
 
 <use ./figs/Example-PV-Diagram.pdf>
-Package pdftex.def Info: ./figs/Example-PV-Diagram.pdf used on input line 511.
+Package pdftex.def Info: ./figs/Example-PV-Diagram.pdf used on input line 512.
 (pdftex.def)             Requested size: 328.82707pt x 235.6462pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 516.
-Package mdframed Info: Not enough space on this page on input line 530.
+(mdframed)              on input line 517.
+Package mdframed Info: Not enough space on this page on input line 529.
  [15
 
  <./figs/Example-PV-Diagram.pdf>]
-<./figs/JouleExpansion.pdf, id=213, 557.08125pt x 378.41376pt>
-File: ./figs/JouleExpansion.pdf Graphic file (type pdf)
-
-<use ./figs/JouleExpansion.pdf>
-Package pdftex.def Info: ./figs/JouleExpansion.pdf used on input line 535.
-(pdftex.def)             Requested size: 272.45877pt x 185.07791pt.
- [16
-
- <./figs/JouleExpansion.pdf>] [17]
 (./Notes.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 28 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11456 strings out of 493089
- 206675 string characters out of 6134842
- 264418 words of memory out of 5000000
- 14808 multiletter control sequences out of 15000+600000
- 26059 words of font info for 67 fonts, out of 8000000 for 9000
+ 11444 strings out of 493089
+ 206436 string characters out of 6134842
+ 264399 words of memory out of 5000000
+ 14799 multiletter control sequences out of 15000+600000
+ 25132 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,43p,10434b,4972s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,12n,43p,10434b,4964s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -684,17 +675,16 @@ usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (17 pages, 336731 bytes).
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Notes.pdf (15 pages, 309408 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
+ 256 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
