@@ -167,76 +167,37 @@ leading to a homogeneous supercritical fluid.
 Supercritical fluids have many industrial applications \cite{SupercriticalFluids}.
 
 
-\subsection*{Equation of state models.}
-An equation of state is a function $\mathcal{F}(\cdot)$ that relates the state variables, temperature $T$, pressure $P$, volume $V$ and composition $n$
-of a system such that:
+\subsection*{Equation of state models}
+An equation of state is a function $\mathcal{F}(\cdot)$ that described how the state variables, temperature $T$, pressure $P$, volume $V$ and composition $n$
+of a system are related, such that:
 \begin{equation}
 \mathcal{F}\left(P,T,V,n\right) = 0
 \end{equation}
-Thus, equations of state are mathematical models of the physical behavior of pure substances (that can also be adapted to mixtures with a few modifications).
-In theory, we should be able to formulate an equation of state that describes all phases of a pure substance (or a mixture) using our understanding of the
-chemical and mechanical properties of the substance.
-However, in practice this is not often the case; most equations of state describe only single phase behavior, and are sometimes not physically motivated.
-The simplest equation of state
+Thus, equations of state are mathematical models of the physical behavior of pure substances, or mixtures with a few modifications.
+The structure of an equation of state can be motivated by our understanding of the physics of the molecules in a system, or can also be data driven mathematical constructs.
+Ultimately, the origin of an equation of state is irrelevant; given that their primary purpose is the prediction of system properties, if predictions are good it does not
+matter how we arrived at the particular functional form for an equation of state. Let's discuss are few common equations of state that you likely use in process
+calculations.
 
-\subsubsection*{Ideal Gas Law and Virial Equations of State.}
-One of the simplest equations of state is the ideal gas law (IGL) (in standard form):
+\subsubsection*{Ideal Gas Law (IGL).}~One of the simplest equations of state is the ideal gas law (IGL):
 \begin{equation}
   Pv-RT = 0
 \end{equation}
-However, the IGL describes gas phase behavior in the limit of low pressure.
-The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model).
-Thus, IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
-One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
-Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
-A Virial equation of state is the power-series in either pressure $P$ or
-inverse powers of the molar (or specific) volume $v$:
-\begin{equation}
-  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
-  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
-\end{equation}
-where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
-The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
-describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
-These coefficients can be estimated from data for each material of interest, or can be derived
-from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
-The Virial coefficients are given by:
-\begin{eqnarray*}\nonumber
-	\alpha_{0}=\alpha^{\prime}_{0} &=& 1 \\
-	\alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
-  \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
-  & \vdots &
-\end{eqnarray*}
+The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model)
+other than collisions with the wall of the container and each other.
+The attractiveness of the ideal gas law comes from our ability to derive it from first principles;
+the functional form for the ideal gas law can be derived from the kinetic theory of gases, see [REFHERE].
+However, the IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
+Thus, although the IGL is valid only in the limit of zero pressure, it is often used for \textit{quick~and~dirty} process calculations.
 
-\clearpage
+% The most significant advancements of the vdW equation was its description of molecular interactions;
+% its parameters describe the volume occupied by fluid particles (excluded volume),
+% and the interactions between particles (both features ignored by the ideal gas law).
+% In particular, the van der Waals parameters $a$ and $b$ are associated with the van der Waal force,
+% and the size of the molecules in the fluid (excluded volume), respectively.
 
-\begin{mdframed}[backgroundcolor=lgray]
-  \noindent\textbf{Example}: Estimate the second Virial coefficient $\alpha_{1}$ as a function of temperature from CH$_{\mathrm{4}}$ compressibility data.
-
-	\vspace{0.2in}
-
-	\noindent\textbf{Solution}:
-	Keeping up to first order term, the compressibility factor as a function of pressure gives:
-	\begin{equation}\label{eq:first-order-Z}
-		Z = 1 + \alpha^{\prime}_{1}P
-	\end{equation}We can estimate $\alpha^{\prime}_{1}$ from the derivative of the power series expansion.
-	The coefficient $\alpha^{\prime}_{1}$ is the slope of the compressibility versus pressure;
-	differentiating the Z pressure power series with respect to pressure gives:
-	\begin{equation}
-		\frac{dZ}{dP} = \sum_{i=0}^{\infty}i\cdot\alpha^{\prime}_{i}P^{i-1}
-	\end{equation}from which:
-	\begin{equation}
-		\frac{dZ}{dP} = \alpha^{\prime}_{1} = \frac{\alpha_{1}}{RT}
-	\end{equation}when $i~=~1$. Substituting the expression for $\alpha^{\prime}_{1}$ in terms of $\alpha_{1}$ into Eqn. \eqref{eq:first-order-Z} gives:
-	\begin{equation}
-		Z = 1 + \left(\alpha_{1}/RT\right)P
-	\end{equation}
-\end{mdframed}
-
-\clearpage
-
-\subsubsection*{Cubic Equations of State}
-Polynomials equations that are cubic in molar (or specific) volume $v$ are the simplest equations of state that can describe both liquid and vapor behavior.
+\subsubsection*{Cubic Equations of State.}
+Cubic equations of state were developed to address the limitations of the ideal gas law.
 The general form for this class of model is given by:
 \begin{equation}
 v^{3}+f_{1}(T,P)v^2+f_{2}(T,P)v+f_{3}(T,P) = 0
@@ -246,22 +207,18 @@ Arguably, the best known cubic equation of state is van der Waals (vdW) equation
 \begin{equation}
   \displaystyle P = \frac{RT}{v-b} - \frac{a}{v^2}
 \end{equation}
-
 \begin{figure}\center
   \includegraphics[width=1.0\textwidth]{./figs/Fig-CubicEOS.pdf}
   \caption{Schematic of a general system and its surroundings.
   $\mathcal{S}$ streams enter or exit from the system which can transfer both heat and work with the surroundings.
   $\mathcal{R}$ chemical reactions can act a source or sink of heat for the system.}\label{fig-energy-schematic}
 \end{figure}
-
 The vdW equation of state was proposed by the Dutch physicist Johannes Diderik van der Waals in his Ph.D thesis published in 1873 at the University of Leiden
-\cite{vdW-Thesis}. He later won the Nobel prize for this work in 1910. The first term in the vdW equation of state describes the mechanical repulsion between molecules in the material,
-while the second term describes the attraction between molecules.
-The most significant advancements of the vdW equation was its description of molecular interactions;
-its parameters describe the volume occupied by fluid particles (excluded volume),
-and the interactions between particles (both features ignored by the ideal gas law).
-In particular, the van der Waals parameters $a$ and $b$ are associated with the van der Waal force,
-and the size of the molecules in the fluid (excluded volume), respectively.
+\cite{vdW-Thesis}; he later won the Nobel prize for this work in 1910.
+The first term in the vdW equation is the volume-corrected ideal gas law;
+the parameter $b$ describes the volume occupied by the molecules of the gas.
+The second term in the vdW equation describes the attraction between molecules; this term describes how potential energy interactions between molecules influences the pressure
+and is parameterized by the vdW parameter $a$.
 The vdW parameters can be estimated directly from data (as van der Waals himself did), potentially from first-principles statistical mechanical calculations,
 or from analytical expressions derived based upon the behavior of the fluid near the critical point.
 
@@ -329,6 +286,56 @@ Similar to vdW, we can derive analytical expressions for the $a(T)$ and $b$ in t
 
 \end{tabular}
 \end{center}
+
+
+One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
+Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
+A Virial equation of state is the power-series in either pressure $P$ or
+inverse powers of the molar (or specific) volume $v$:
+\begin{equation}
+  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
+  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
+\end{equation}
+where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
+describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
+These coefficients can be estimated from data for each material of interest, or can be derived
+from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
+The Virial coefficients are given by:
+\begin{eqnarray*}\nonumber
+	\alpha_{0}=\alpha^{\prime}_{0} &=& 1 \\
+	\alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
+  \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
+  & \vdots &
+\end{eqnarray*}
+
+\clearpage
+
+\begin{mdframed}[backgroundcolor=lgray]
+  \noindent\textbf{Example}: Estimate the second Virial coefficient $\alpha_{1}$ as a function of temperature from CH$_{\mathrm{4}}$ compressibility data.
+
+	\vspace{0.2in}
+
+	\noindent\textbf{Solution}:
+	Keeping up to first order term, the compressibility factor as a function of pressure gives:
+	\begin{equation}\label{eq:first-order-Z}
+		Z = 1 + \alpha^{\prime}_{1}P
+	\end{equation}We can estimate $\alpha^{\prime}_{1}$ from the derivative of the power series expansion.
+	The coefficient $\alpha^{\prime}_{1}$ is the slope of the compressibility versus pressure;
+	differentiating the Z pressure power series with respect to pressure gives:
+	\begin{equation}
+		\frac{dZ}{dP} = \sum_{i=0}^{\infty}i\cdot\alpha^{\prime}_{i}P^{i-1}
+	\end{equation}from which:
+	\begin{equation}
+		\frac{dZ}{dP} = \alpha^{\prime}_{1} = \frac{\alpha_{1}}{RT}
+	\end{equation}when $i~=~1$. Substituting the expression for $\alpha^{\prime}_{1}$ in terms of $\alpha_{1}$ into Eqn. \eqref{eq:first-order-Z} gives:
+	\begin{equation}
+		Z = 1 + \left(\alpha_{1}/RT\right)P
+	\end{equation}
+\end{mdframed}
+
+\clearpage
+
 
 
 \subsubsection*{Data driven equations of state}
