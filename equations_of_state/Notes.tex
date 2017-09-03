@@ -107,16 +107,21 @@
 \begin{mdframed}[backgroundcolor=lgray]
 \subsection*{Previously:}
 \noindent We introduced the energy balance for an open and closed system.
-An open system allows both mass and energy transfer between a system and its surroundings:
+An open system allows both mass and energy transfer between the system and its surroundings:
 \begin{eqnarray*}\label{eqn:general-open-balance}
-	\frac{d}{dt}\Bigl[m\left(u+e_{K}+e_{P}\right)\Bigr]\Bigr|_{sys} &=& \dot{Q}+\dot{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(u_{s}+gz_{s}+\frac{1}{2}s_{s}^{2}\right)\dot{m}_{s}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}\\\label{eqn:total-mass-balance}
+	\frac{d}{dt}\Bigl[m\left(u+\frac{1}{2}\bar{v}_{s}^{2}+gz\right)\Bigr]_{sys} &=& \dot{Q}+\dot{W}_{sh}+
+	\sum_{s=1}^{\mathcal{S}}\nu_{s}\left(h_{s}+gz_{s}+\frac{1}{2}\bar{v}_{s}^{2}\right)\dot{m}_{s}+
+	\sum_{r=1}^{\mathcal{R}}\dot{e}_{r}\\\label{eqn:total-mass-balance}
 	\frac{dm}{dt} &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\dot{m}_{s}
 \end{eqnarray*}
-On the other hand, in a closed system no mass transfer is allowed between the systems and the surroundings:
-\begin{equation*}
-  \frac{d}{dt}\Bigr[m\left(u+e_{K}+e_{P}\right)\Bigl]\Bigr|_{sys} = \dot{Q}+\dot{W}+\sum_{r=1}^{\mathcal{R}}\dot{E}_{r}
-\end{equation*}
-Lastly, we introduced the shaft work and pressure expansion work $\delta{W} = -P_{x}dV$, where the external pressure $P_{x}$ equals the system pressure for a reversible expansion or contraction.
+While no mass transfer is allowed between the system and the surroundings for a closed system.
+We derived the differential forms for the closed energy balances (closed first law):
+\begin{eqnarray*}
+	\delta{Q} &=& C_{V}dT+\left[\left(\frac{\partial U}{\partial V}\right)_{T}+P\right]dV\\
+	\delta{Q} &=& C_{P}dT+\left[\left(\frac{\partial U}{\partial P}\right)_{T}+P\left(\frac{\partial V}{\partial P}\right)_{T}\right]dP
+\end{eqnarray*}where $C_{P}$ and $C_{V}$ denote the constant pressure and constant volume heat capacities, respectively.
+Mechanical work in a closed system was given by $\delta{W}=-P_{e}dV$, where $P_{e}$ denotes the external pressure (of the surroundings).
+The external pressure $P_{e}\simeq P$ (external pressure equals the system pressure) for reversible expansion or contraction operations.
 
 \subsection*{Student outcomes:}
 At the end of this lecture module, you will be able to:
@@ -135,43 +140,44 @@ At the end of this lecture module, you will be able to:
 % * [Data driven equations of state](<#data-driven-eos>)
 
 \subsection*{Introduction}
-Equations of state *model* the behavior of pure materials, or mixture of materials as a function of physical conditions.
-This is critically important for a variety of reasons, not the least of which is that we harness the power of phase change in many technologies
-that are common place today. The physical knobs that can be adjusted for any system are the temperature $T$, pressure $P$ and volume $V$.
-However, these three properties are *not* independent;
-we typically write a single property, for example the volume of system, as a function of the other two, where the
-temperature $T$ and the pressure $P$ are independent parameters that can be adjusted for some technological benefit.
+Equations of state are mathematical models of the behavior of pure materials, or mixture of materials as a function of physical conditions and composition.
+Equations of state are critically important because the physical knobs that we can adjust for chemical engineering processes
+are the temperature $T$, pressure $P$ and volume $V$ of the system.
+However, these three properties are not independent;
+we typically write a single property, for example the volume of system, as a function of the temperature $T$ and the pressure $P$, which
+are independent parameters that can be adjusted for some technological benefit. Thus, we rely on an equation of state to \emph{predict} properties e.g., the volume
+from the independent parameters.
 
-\begin{wrapfigure}{l}{0.60\textwidth}\center
-\includegraphics[width=0.50\textwidth]{./figs/PVT-Diagram.pdf}
-\caption{Schematic of a general system and its surroundings.
-$\mathcal{S}$ streams enter or exit from the system which can transfer both heat and work with the surroundings.
-$\mathcal{R}$ chemical reactions can act a source or sink of heat for the system.}\label{fig-energy-schematic}
+\begin{wrapfigure}{l}{0.55\textwidth}\center
+\includegraphics[width=0.54\textwidth]{./figs/PT-Diagram.pdf}
+\caption{Hypothetical pressure temperature (PT) phase diagram for a pure material.}\label{fig-phase-diagrams}
 \end{wrapfigure}
 
-Consider a typical pressure temperature (PT)-diagram shown above for a pure substance.
-This is an example of a phase diagram.
-As we move around the (P,T) space, pure substances assume different physical forms (phases) ranging from a solid, liquid or gas to a fourth regime
-called the supercritical phase which has fluid like properties.
-The solid lines, which are borders between these phases, demarcate phase transitions e.g., changing from a solid to a gas (sublimation curve)
+Consider a typical pressure temperature (PT) phase diagram for a pure substance (Fig. \ref{fig-phase-diagrams}, top).
+As we move around the (P,T) space, pure substances assume different physical forms (phases) ranging from a solid, liquid or gas to a fourth regime,
+the supercritical phase which has fluid like properties.
+The solid lines on the PT-diagram are borders which demarcate phase transitions e.g., changing from a solid to a gas (sublimation curve)
 or a liquid to a gas (vaporization curve).
-At (P,T) points far away from these transitions, substances exists as a pure phase e.g., only a liquid or gas phase;
-however, directly on these curves both phases exist.
-At a special point called the triple point (P$_{\mathrm{tp}}$,T$_{\mathrm{tp}}$)
-all three phases coexist. If we continue to walk up the vaporization curve, we eventually arrive at the critical point (P$_{\mathrm{cr}}$,T$_{\mathrm{cr}}$).
-When the temperature and pressure exceed the critical values, the differences between the liquid and gas phases disappear,
-leading to a homogeneous supercritical fluid phase.
-Supercritical fluids have many industrial applications, mostly centered around extraction technologies [REF].
+At (P,T) points far away from these transitions, substances exists as a pure phase e.g., a liquid or gas only;
+however, directly on these curves both phases exist in a mixture.
+At a special point called the triple point (P$_{\mathrm{tp}}$,T$_{\mathrm{tp}}$) all three phases coexist.
+Continuing up the vaporization curve, we arrive at the critical point (P$_{\mathrm{cr}}$,T$_{\mathrm{cr}}$).
+When temperature and pressure exceed the critical values, the differences between liquid and gas phases disappear,
+leading to a homogeneous supercritical fluid.
+Supercritical fluids have many industrial applications \cite{SupercriticalFluids}.
 
 
 \subsection*{Equation of state models.}
-An equation of state is a function $f(\cdot)$ that relates the state variables, temperature $T$, pressure $P$ and volume $V$ of a system such that:
+An equation of state is a function $\mathcal{F}(\cdot)$ that relates the state variables, temperature $T$, pressure $P$, volume $V$ and composition $n$
+of a system such that:
 \begin{equation}
-f\left(P,T,V\right) = 0
+\mathcal{F}\left(P,T,V,n\right) = 0
 \end{equation}
-Thus, equations of state are mathematical models of the physical behavior of pure substances or mixtures.
-In theory, we should be able to formulate an equation of state that describes all phases of a pure substance (or a mixture).
-However, in practice this is not often the case; most equations of state describe only single phase behavior.
+Thus, equations of state are mathematical models of the physical behavior of pure substances (that can also be adapted to mixtures with a few modifications).
+In theory, we should be able to formulate an equation of state that describes all phases of a pure substance (or a mixture) using our understanding of the
+chemical and mechanical properties of the substance.
+However, in practice this is not often the case; most equations of state describe only single phase behavior, and are sometimes not physically motivated.
+The simplest equation of state
 
 \subsubsection*{Ideal Gas Law and Virial Equations of State.}
 One of the simplest equations of state is the ideal gas law (IGL) (in standard form):

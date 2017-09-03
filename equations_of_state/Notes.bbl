@@ -13,6 +13,12 @@
   \textsc{Annotation:}\ #2\end{quotation}}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{SupercriticalFluids}
+Knez V, Markocic E, Leitgeb M, Primozic M, Hrncic M, et~al. (2014) {Industrial
+  applications of supercritical fluids: A review}.
+\newblock Energy 77: 235-243.
+\bibAnnoteFile{SupercriticalFluids}
+
 \bibitem{vdW-Thesis}
 {van der Waals, J D} (1873) {On the Continuity of the Gaseous and Liquid
   States}.
