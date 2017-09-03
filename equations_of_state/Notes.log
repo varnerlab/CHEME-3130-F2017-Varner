@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 10:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -650,10 +650,10 @@ Missing character: There is no  in font phvr7t!
 ### semi simple group (level 1) entered at line 31 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11658 strings out of 493089
- 208368 string characters out of 6134842
- 364492 words of memory out of 5000000
- 15005 multiletter control sequences out of 15000+600000
+ 11662 strings out of 493089
+ 208436 string characters out of 6134842
+ 364507 words of memory out of 5000000
+ 15008 multiletter control sequences out of 15000+600000
  24203 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,43p,10434b,4983s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -670,7 +670,7 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (9 pages, 188857 bytes).
+Output written on Notes.pdf (9 pages, 189010 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams

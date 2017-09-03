@@ -25,6 +25,12 @@ Knez V, Markocic E, Leitgeb M, Primozic M, Hrncic M, et~al. (2014) {Industrial
 \newblock Ph.D. thesis, {Universiteit Leiden, Leiden, The Netherlands}.
 \bibAnnoteFile{vdW-Thesis}
 
+\bibitem{West:2005aa}
+West JB (2005) Robert boyle's landmark book of 1660 with the first experiments
+  on rarified air.
+\newblock J Appl Physiol (1985) 98: 31-9.
+\bibAnnoteFile{West:2005aa}
+
 \bibitem{Valderrama2003}
 {Jose ́ O Valderrama} (2003) {The State of the Cubic Equations of State}.
 \newblock {Ind Eng Chem Res} 42: 1603-1618.
