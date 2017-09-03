@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -618,11 +618,15 @@ File: ./figs/Fig-CubicEOS.pdf Graphic file (type pdf)
 <use ./figs/Fig-CubicEOS.pdf>
 Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 211.
 (pdftex.def)             Requested size: 469.75502pt x 187.4413pt.
- [3 <./figs/Fig-CubicEOS.pdf>] [4] [5]
+ [3 <./figs/Fig-CubicEOS.pdf>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 314.
-Package mdframed Info: Not enough space on this page on input line 335.
+(mdframed)              on input line 225.
+ [4] [5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 316.
+Package mdframed Info: Not enough space on this page on input line 337.
  [6
 
 ]
@@ -631,8 +635,8 @@ Package mdframed Info: Not enough space on this page on input line 335.
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 360.
-Package mdframed Info: Not enough space on this page on input line 404.
+(mdframed)              on input line 362.
+Package mdframed Info: Not enough space on this page on input line 406.
  [8
 
 ] (./Notes.bbl
@@ -666,7 +670,7 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (9 pages, 188988 bytes).
+Output written on Notes.pdf (9 pages, 188857 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
