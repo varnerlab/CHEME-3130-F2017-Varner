@@ -186,9 +186,10 @@ calculations.
 The IGL ignores both the volume of the molecules in the gas, and all interactions between them (hard-sphere model)
 other than collisions with the wall of the container and each other.
 The attractiveness of the ideal gas law comes from our ability to derive it from first principles;
-the functional form for the ideal gas law can be derived from the kinetic theory of gases, see [REFHERE].
+the functional form for the ideal gas law can be derived from the kinetic theory of gases (discussed in almost every physical chemistry textbook).
 However, the IGL does not accurately describe gas phase behavior at realistic pressures, not does it describe phase transitions.
-Thus, although the IGL is valid only in the limit of zero pressure, it is often used for \textit{quick~and~dirty} process calculations.
+Despite this, the IGL is often used for \textit{quick~and~dirty} process calculations, even though it is technically valid in only in the
+limit of zero pressure.
 
 % The most significant advancements of the vdW equation was its description of molecular interactions;
 % its parameters describe the volume occupied by fluid particles (excluded volume),
@@ -198,7 +199,7 @@ Thus, although the IGL is valid only in the limit of zero pressure, it is often 
 
 \subsubsection*{Cubic Equations of State.}
 Cubic equations of state were developed to address the limitations of the ideal gas law.
-The general form for this class of model is given by:
+The general form for this class of equation of state is given by:
 \begin{equation}
 v^{3}+f_{1}(T,P)v^2+f_{2}(T,P)v+f_{3}(T,P) = 0
 \end{equation}
@@ -209,14 +210,15 @@ Arguably, the best known cubic equation of state is van der Waals (vdW) equation
 \end{equation}
 \begin{figure}\center
   \includegraphics[width=1.0\textwidth]{./figs/Fig-CubicEOS.pdf}
-  \caption{Schematic of a general system and its surroundings.
-  $\mathcal{S}$ streams enter or exit from the system which can transfer both heat and work with the surroundings.
-  $\mathcal{R}$ chemical reactions can act a source or sink of heat for the system.}\label{fig-energy-schematic}
+  \caption{Pressure volume behavior of CO$_{\mathrm{2}}$.
+	A: vdW equation prediction of the PV behavior of CO$_{\mathrm{2}}$ for different temperatures versus data.
+	B: Peng-Robinson equation prediction of the PV behavior of CO$_{\mathrm{2}}$ for different temperatures versus data.}  \label{fig-cubic-eos}
 \end{figure}
+
 The vdW equation of state was proposed by the Dutch physicist Johannes Diderik van der Waals in his Ph.D thesis published in 1873 at the University of Leiden
 \cite{vdW-Thesis}; he later won the Nobel prize for this work in 1910.
 The first term in the vdW equation is the volume-corrected ideal gas law;
-the parameter $b$ describes the volume occupied by the molecules of the gas.
+the parameter $b$ describes the volume occupied by the molecules of the gas. Thus $v-b$ describes the molar volume that is not occupied by the gas moleculues.
 The second term in the vdW equation describes the attraction between molecules; this term describes how potential energy interactions between molecules influences the pressure
 and is parameterized by the vdW parameter $a$.
 The vdW parameters can be estimated directly from data (as van der Waals himself did), potentially from first-principles statistical mechanical calculations,
