@@ -191,6 +191,27 @@ However, the IGL does not accurately describe gas phase behavior at realistic pr
 Despite this, the IGL is often used for \textit{quick~and~dirty} process calculations, even though it is technically valid in only in the
 limit of zero pressure.
 
+\paragraph*{The compressibility factor $Z$ as a correction to the IGL.}
+Suppose we wanted to fix the IGL so that we could use it under realistic process conditions.
+One strategy to do this would be to formulate a dimensionless correction factor that added back intermolecular forces,
+(and the volume of molecules making up a material) to the IGL.
+Lets give this correction factor the symbol $Z$, and call it the compressibility factor defined as $Z \equiv {Pv}/{RT}$.
+It's easy to see that the compressibility factor can act as correction to the IGL if we re-arrange the definition:
+\begin{equation}
+			Pv = ZRT
+\end{equation}where if $Z=1$ we recover the IGL.
+However, we have not formulated what $Z$ is; let's define the compressibility factor as:
+\begin{equation}
+  \displaystyle Z \equiv  \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad\mathrm{or}\qquad
+  \displaystyle Z \equiv  \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
+\end{equation}
+These models for $Z$ are called the Virial equations of state, where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
+describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
+These coefficients can be estimated from data for each material of interest, or can be derived
+from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
+
+
 % The most significant advancements of the vdW equation was its description of molecular interactions;
 % its parameters describe the volume occupied by fluid particles (excluded volume),
 % and the interactions between particles (both features ignored by the ideal gas law).
@@ -258,6 +279,24 @@ tabulated critical values that are often available (in contrast to PVT data whic
 % ##### Exercises
 % * [Show that van der Waals equation is a cubic equation of state](./VDL-CubicEqnOfState.md)
 % * [Estimate the parameters in the van der Waals equation of state](./VDL-Parameters.md)
+
+\paragraph*{Reduced vdW and principle of corresponding states.}
+van der Waals hypothesized that all fluids, when compared at the same \textit{reduced} temperature and reduced pressure,
+have approximately the same \textit{compressibility factor}, and all deviate from ideal gas behavior to about the same degree.
+This hypothesis is called the \textit{principle of corresponding states}.
+The utility of the principle of corresponding states is that it removes the material dependence from material specific constants;
+material specific constants that vary for each type of substance are eliminated in the \textit{reduced} form of the equation of state.
+To begin this discussion, we first define what we mean by \textit{reduced}.
+The reduced form for an equation state is the dimensionless form written with respect to:
+\begin{equation}
+	T_{r}=T/T_{cr}\qquad P_{r}=P/P_{cr}\qquad v_{r} = v/v_{cr}
+\end{equation}The reduced temperature $T_{r}$, pressure $P_{r}$ and molar volume $v_{r}$ are dimensionless quantitates that collapse
+the temperature, pressure and volume of all materials onto the same scale.
+Starting with the vdW equation, and the closed forms of $a$ and $b$ in terms of the critical temperature and pressure we can substitute the pressure,
+temperature and the molar volume in terms of the reduced variables to arrive at (after some algebra):
+\begin{equation}
+	P_{r} = \frac{8T_{r}}{3v_{r}-1}-\frac{3}{v_{r}^2}
+\end{equation}
 
 \subsection*{Modifications to vdW equation of state}
 vdW was considered one of the most significant contributions to Thermodynamics since Boyle's work in the 17th century (Boyle's law, published in 1662, see \cite{West:2005aa}).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 SEP 2017 09:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,37 +611,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
- <./figs/PT-Diagram.pdf>]
-<./figs/Fig-CubicEOS.pdf, id=37, 1018.80624pt x 406.51875pt>
+ <./figs/PT-Diagram.pdf>] [3]
+<./figs/Fig-CubicEOS.pdf, id=40, 1018.80624pt x 406.51875pt>
 File: ./figs/Fig-CubicEOS.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-CubicEOS.pdf>
-Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 212.
+Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 233.
 (pdftex.def)             Requested size: 469.75502pt x 187.4413pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 227.
- [3] [4 <./figs/Fig-CubicEOS.pdf>] [5]
+(mdframed)              on input line 248.
+ [4 <./figs/Fig-CubicEOS.pdf>] [5] [6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 318.
-Package mdframed Info: Not enough space on this page on input line 339.
- [6
+(mdframed)              on input line 357.
+Package mdframed Info: Not enough space on this page on input line 378.
+ [7
 
 ]
-[7
+[8
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 364.
-Package mdframed Info: Not enough space on this page on input line 408.
- [8
+(mdframed)              on input line 403.
+Package mdframed Info: Not enough space on this page on input line 447.
+ [9
 
 ] (./Notes.bbl
 Missing character: There is no Ì in font phvr7t!
 Missing character: There is no  in font phvr7t!
-) [9
+) [10
 
 ] (./Notes.aux) )
 (\end occurred inside a group at level 1)
@@ -651,7 +651,7 @@ Missing character: There is no  in font phvr7t!
 Here is how much of TeX's memory you used:
  11662 strings out of 493089
  208429 string characters out of 6134842
- 370507 words of memory out of 5000000
+ 368507 words of memory out of 5000000
  15008 multiletter control sequences out of 15000+600000
  24203 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -670,10 +670,10 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (9 pages, 195958 bytes).
+Output written on Notes.pdf (10 pages, 200521 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 156 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
