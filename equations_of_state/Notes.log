@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 SEP 2017 09:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 SEP 2017 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,47 +612,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2
 
  <./figs/PT-Diagram.pdf>] [3]
-<./figs/Fig-CubicEOS.pdf, id=40, 1018.80624pt x 406.51875pt>
+<./figs/Fig-CubicEOS.pdf, id=40, 785.93625pt x 315.1775pt>
 File: ./figs/Fig-CubicEOS.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-CubicEOS.pdf>
-Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 233.
-(pdftex.def)             Requested size: 469.75502pt x 187.4413pt.
+Package pdftex.def Info: ./figs/Fig-CubicEOS.pdf used on input line 241.
+(pdftex.def)             Requested size: 469.75502pt x 188.38657pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 248.
- [4 <./figs/Fig-CubicEOS.pdf>] [5] [6]
+(mdframed)              on input line 256.
+ [4 <./figs/Fig-CubicEOS.pdf>]
+Package mdframed Info: Not enough space on this page on input line 287.
+ [5] [6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 357.
-Package mdframed Info: Not enough space on this page on input line 378.
+(mdframed)              on input line 365.
+Package mdframed Info: Not enough space on this page on input line 388.
  [7
 
 ]
-[8
-
-]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 403.
-Package mdframed Info: Not enough space on this page on input line 447.
- [9
+(mdframed)              on input line 418.
 
-] (./Notes.bbl
+[8
+
+] (./Notes.bbl [9]
 Missing character: There is no Ã in font phvr7t!
 Missing character: There is no Å in font phvr7t!
-) [10
-
-] (./Notes.aux) )
+) [10] (./Notes.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 31 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11662 strings out of 493089
- 208429 string characters out of 6134842
- 368507 words of memory out of 5000000
- 15008 multiletter control sequences out of 15000+600000
+ 11670 strings out of 493089
+ 208542 string characters out of 6134842
+ 371540 words of memory out of 5000000
+ 15015 multiletter control sequences out of 15000+600000
  24203 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,43p,10434b,4983s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -660,20 +657,21 @@ Here is how much of TeX's memory you used:
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (10 pages, 200521 bytes).
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Notes.pdf (10 pages, 210125 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 161 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

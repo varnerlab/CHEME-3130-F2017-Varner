@@ -36,4 +36,11 @@ West JB (2005) Robert boyle's landmark book of 1660 with the first experiments
 \newblock {Ind Eng Chem Res} 42: 1603-1618.
 \bibAnnoteFile{Valderrama2003}
 
+\bibitem{Pitzer1955}
+Pitzer KS, Lippman D, Curl RF, Huggins CM, Peterson DE (1955) {The Volumetric
+  and Thermodynamic Properties of Fluids. 11. Compressibility Factor, Vapor
+  Pressure and Entropy of Vaporization}.
+\newblock JACS 77: 3433-3440.
+\bibAnnoteFile{Pitzer1955}
+
 \end{thebibliography}

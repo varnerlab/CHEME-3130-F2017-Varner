@@ -206,10 +206,18 @@ However, we have not formulated what $Z$ is; let's define the compressibility fa
   \displaystyle Z \equiv  \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
 \end{equation}
 These models for $Z$ are called the Virial equations of state, where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
-The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
+The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ which are related with one another:
+\begin{eqnarray*}\nonumber
+	\alpha_{0}=\alpha^{\prime}_{0} &=& 1 \\
+	\alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
+  \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
+  & \vdots &
+\end{eqnarray*}
 describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
 These coefficients can be estimated from data for each material of interest, or can be derived
 from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
+The first Virial coefficient is always defined as unity, while the second Virial coefficient describes two-body interactions,
+the third describes three-body interactions and so on.
 
 
 % The most significant advancements of the vdW equation was its description of molecular interactions;
@@ -274,6 +282,8 @@ Solving these three equations for v$_{\mathrm{cr}}$, $a$ and $b$ in terms of P$_
 \end{equation}
 Although these estimates for $v_{\mathrm{cr}}$, $a$ and $b$ may not be optimal, they can be estimated from
 tabulated critical values that are often available (in contrast to PVT data which is not as abundant).
+vdW using $a$ and $b$ defined by the critical values has good performance near the critical point, but
+fails to capture the correct behavior away from the critical region (Fig. \ref{fig-cubic-eos}A).
 \end{mdframed}
 
 % ##### Exercises
@@ -301,7 +311,7 @@ temperature and the molar volume in terms of the reduced variables to arrive at 
 \subsection*{Modifications to vdW equation of state}
 vdW was considered one of the most significant contributions to Thermodynamics since Boyle's work in the 17th century (Boyle's law, published in 1662, see \cite{West:2005aa}).
 However, it does not correctly predict gas-liquid behavior for most applications.
-Towards this issue, there have been many modifications to the vdW equation to correct its performance \cite{Valderrama2003}.
+Towards this issue, there have been \textit{many} modifications to the vdW equation to correct its performance \cite{Valderrama2003}.
 These modifications can all be generated from the generic cubic equation of state model:
 \begin{equation}\label{eq:generic-model}
 P = \frac{RT}{\left(v-b\right)}-\frac{a(T)}{\left(v+\epsilon b\right)\left(v+\sigma b\right)}
@@ -314,43 +324,41 @@ Similar to vdW, we can derive analytical expressions for the $a(T)$ and $b$ in t
 	b = \Omega\left[\frac{RT_{\mathrm{cr}}}{P_{\mathrm{cr}}}\right]
 \end{equation}
 
+\begin{table}
+	\caption{Common cubic equations of state. The $\alpha$ functions for the SRK and Peng-Robinson (PR) are given by: $\alpha_{SRK}\left(T_{r},\omega\right)=\left(1+\left(0.480+1.574\omega-0.176\omega^{2}\right)\left(1-\sqrt{T_{r}}\right)\right)^{2}$ where $\omega$ is called the
+	accentric factor and $\alpha_{PR}\left(T_{r},\omega\right)=\left(1+\kappa\left(1-\sqrt{T_{r}}\right)\right)^{2}$ where $\kappa=0.37464+1.54336\omega-0.26992\omega^{2}$.
+	}
 \begin{center}
-\begin{tabular}{lccccc}
+\begin{tabular}{rcccccc}
 	\hline\\
-	Eq. of State & $\alpha\left(T_{r}\right)$ & $\sigma$ & $\epsilon$ & $\Omega$ & $\Psi$ \\\\
+	Eq. of State & year & $\alpha\left(T_{r}\right)$ & $\sigma$ & $\epsilon$ & $\Omega$ & $\Psi$ \\\\
 	\hline\\
 
-	vdW (1873) & 1 & 0 & 0 & 1/8 & 27/64 \\
-	RK (1949) & T$_{r}^{-1/2}$ & 1 & 0 & 0.08664 & 0.42748 \\
-	SRK (1972) & $\alpha_{SRK}\left(T_{r},\omega\right)$ & 1 & 0 & 0.08664 & 0.42748 \\
-	PR (1976) & $\alpha_{PR}\left(T_{r},\omega\right)$ & 1+$\sqrt{2}$ & 1 - $\sqrt{2}$ & 0.07779 & 0.45724 \\\\
+	van der Waals (vdW) & 1873 & 1 & 0 & 0 & 1/8 & 27/64 \\
+	Redlich-Kwong (RK) & 1949 & T$_{r}^{-1/2}$ & 1 & 0 & 0.08664 & 0.42748 \\
+	Soave-Redlich-Kwong (SRK) & 1972 & $\alpha_{SRK}\left(T_{r},\omega\right)$ & 1 & 0 & 0.08664 & 0.42748 \\
+	Peng-Robinson (PR) & 1976 & $\alpha_{PR}\left(T_{r},\omega\right)$ & 1+$\sqrt{2}$ & 1 - $\sqrt{2}$ & 0.07779 & 0.45724 \\\\
 
 	\hline
-
 \end{tabular}
 \end{center}
+\end{table}
 
 
-One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
-Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
-A Virial equation of state is the power-series in either pressure $P$ or
-inverse powers of the molar (or specific) volume $v$:
-\begin{equation}
-  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
-  \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
-\end{equation}
-where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
-The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
-describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
-These coefficients can be estimated from data for each material of interest, or can be derived
-from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
-The Virial coefficients are given by:
-\begin{eqnarray*}\nonumber
-	\alpha_{0}=\alpha^{\prime}_{0} &=& 1 \\
-	\alpha_{1}^{\prime} &=& \frac{\alpha_{1}}{RT}\\\nonumber
-  \alpha_{2}^{\prime} &=& \frac{\alpha_{2}-\alpha_{1}^2}{\left(RT\right)^2}\\\nonumber
-  & \vdots &
-\end{eqnarray*}
+% One way to correct the IGL for higher pressures, is to use a correction in the form of a Virial equation of state.
+% Suppose we define a dimensionless constant $Z$, called the compressibility factor, as $Z \equiv {Pv}/{RT}$.
+% A Virial equation of state is the power-series in either pressure $P$ or
+% inverse powers of the molar (or specific) volume $v$:
+% \begin{equation}
+%   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha_{i}v^{-i}\qquad
+%   \displaystyle Z \equiv \frac{Pv}{RT} = \sum_{i=0}^{\infty}\alpha^{\prime}_{i}P^{i}
+% \end{equation}
+% where $\alpha_{i},\alpha^{\prime}_{i}$ denotes Virial coefficients.
+% The Virial coefficients $\alpha_{i}$ and $\alpha^{\prime}_{i}$ (which are related with one another)
+% describe the strength of intermolecular interactions (interactions between molecules) in the fluid.
+% These coefficients can be estimated from data for each material of interest, or can be derived
+% from first-principle statistical mechanical calculations given a potential function which describes the strength of interactions between molecules.
+
 
 \clearpage
 
@@ -372,33 +380,40 @@ The Virial coefficients are given by:
 	\begin{equation}
 		\frac{dZ}{dP} = \alpha^{\prime}_{1} = \frac{\alpha_{1}}{RT}
 	\end{equation}when $i~=~1$. Substituting the expression for $\alpha^{\prime}_{1}$ in terms of $\alpha_{1}$ into Eqn. \eqref{eq:first-order-Z} gives:
-	\begin{equation}
+	\begin{equation}\label{eq:first-alpha}
 		Z = 1 + \left(\alpha_{1}/RT\right)P
 	\end{equation}
+	Equation \eqref{eq:first-alpha} is has slope $\alpha_{1}/RT$;
+	thus given CH$_{\mathrm{4}}$ data we can estimate $\alpha_{1}$ by computing the slope of P versus Z for at different temperatures. 
 \end{mdframed}
 
 \clearpage
 
 
 
-\subsubsection*{Data driven equations of state}
+\subsection*{Data driven equations of state for solids and liquids.}
 Suppose we know the molar (or specific) volume of a pure substance (in either the liquid, gas or solid phase) at some temperature $T_{o}$ and pressure $P_{o}$, denoted by $v_{o}(T_{o},P_{o})$.
 Instead of developing a model for how the molar or specific volume changes as we move around the entire $PT$-space (which is complicated by phase transitions), lets develop an expression for $v(T,P)$ in the neighborhood of $(T_{o},P_{o})$ by a Taylor expansion of $v(T,P)$:
 \begin{equation}
-  \displaystyle dv \simeq \left(\frac{\partial v}{\partial T}\right)\Bigr|_{P}dT + \left(\frac{\partial v}{\partial P}\right)\Bigr|_{T}dP
+  \displaystyle dv = \left(\frac{\partial v}{\partial T}\right)_{P}dT + \left(\frac{\partial v}{\partial P}\right)_{T}dP
 \end{equation}
 Dividing both sides of the Taylor approximation by the molar (or specific volume) and then integrating:
 \begin{equation}
-  \displaystyle \int_{v_{o}}^{v}\frac{dv}{v} = \int_{T_{o}}^{T} \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)\Bigr|_{P}dT+\int_{P_{o}}^{P}\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)\Bigr|_{T}dP
+  \displaystyle \int_{v_{o}}^{v}\frac{dv}{v} = \int_{T_{o}}^{T} \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_{P}dT+
+	\int_{P_{o}}^{P}\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_{T}dP
 \end{equation}
 gives (after some algebraic rearrangement):
-\begin{equation}
-\displaystyle v \simeq v_{o}\exp\left(\beta\Delta{T}-\kappa\Delta{P}\right)
+\begin{equation}\label{eq:ddeos}
+\displaystyle v = v_{o}\exp\left(\beta\Delta{T}-\kappa\Delta{P}\right)
 \end{equation}
-where $\beta\equiv\frac{1}{v}\left(\frac{\partial v}{\partial T}\right)\Bigr|_{P}$ and $\kappa = -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)\Bigr|_{T}$ are referred to as the volume expansivity and the isothermal compressibility,
-respectively and $\Delta{P}=P-P_{o}$ and $\Delta{T}=T-T_{o}$.
-
-\clearpage
+where
+\begin{equation}
+\beta\equiv\frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_{P} \qquad \kappa \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_{T}
+\end{equation}
+are the volume expansivity and the isothermal compressibility, respectively and $\Delta{P}=P-P_{o}$ and $\Delta{T}=T-T_{o}$.
+Equation \eqref{eq:ddeos} forms an approximate equation of state, for materials in any phase provided $\beta$ and $\kappa$ can be measured in the
+neighborhood of the operating point $(T_{o},P_{o})$. Of course, because this approximate equation of state is only the linear terms of the Taylor series,
+its performance will degrade the further away we get from the operating point.
 
 \begin{mdframed}[backgroundcolor=lgray]
   \noindent\textbf{Example}: For liquid acetone at 20$^{\mathrm{o}}$C and 1 bar:
@@ -437,27 +452,27 @@ respectively and $\Delta{P}=P-P_{o}$ and $\Delta{T}=T-T_{o}$.
 			P_{1} = 240 + (24)(10) = 241~\mathrm{bar}
 		\end{equation}
 		}
-		\item[(c)]{Direct substitution of the change in pressure, temperature, $\beta$ and $\kappa$ gives:
+		\item[(c)]{Direct substitution of the change in pressure, temperature, $\beta$ and $\kappa$ to calculate the new volume:
 		\begin{equation}
-			v\simeq(1.287)\exp\Bigl((1.487\times10^{-3})(20)-(62\times10^{-6})(9)\Bigr)~=~-0.038~\mathrm{cm^{3}~g^{-1}}
-		\end{equation}
+			v\simeq(1.287)\exp\Bigl((1.487\times10^{-3})(-20)-(62\times10^{-6})(9)\Bigr)~=~1.26~\mathrm{cm^{3}~g^{-1}}
+		\end{equation}where gives $\Delta{v}$ = $(1.26 - 1.3)$ = $-0.039~\mathrm{cm^{3}~g^{-1}}$.
 		}
 	\end{enumerate}
 
 \end{mdframed}
 
-\clearpage
-
-\section*{Generalized correlation models}
+\subsection*{Generalized correlation models}
 Generalized correlation models for the compressibility factor $Z$ and the second Virial coefficient $\alpha_{1}$ find widespread industrial use.
-The most popular of these correlations was developed by Pitzer and coworkers [REF].
+The most popular of these correlations was developed by Pitzer and coworkers \cite{Pitzer1955}.
 The correlation for the compressibility factor is given by:
 \begin{equation}
 	Z = Z^{0}+\omega Z^{1}
 \end{equation}where $Z^{0}$ and $Z^{1}$ are functions of the \textit{reduced~temperature} T$_{r}$~=~TT$_{cr}^{-1}$ and \textit{reduced~pressure} P$_{r}$~=~PP$_{cr}^{-1}$,
 and $\omega$ denotes the \textit{acentric~factor}.
-The acentric factor, introduced by Kenneth Pitzer in 1955, is a tool to characterize the phase of single components;
-at a molecular level the acentric factor is a measure of the non-sphericity (centricity) of molecules [REF].
+The acentric factor, introduced by Pitzer in 1955, is a tool to characterize the phase of single components;
+at a molecular level the acentric factor is a measure of the non-sphericity (centricity) of molecules.
+A similar model can be developed for the second Virial coefficient.
+See the study of Pitzer and coworkers \cite{Pitzer1955} and Section 4.4 of MDK for details.
 
 
 \bibliography{References.bib}
