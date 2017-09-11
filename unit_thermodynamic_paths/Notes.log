@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2017 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 SEP 2017 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,16 +586,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  <./figs/CarnotCycle.pdf>]
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
- [3] [4] [5] (./Notes.bbl) [6] (./Notes.aux) )
+ [3] [4] [5] [6] (./Notes.bbl) [7
+
+] (./Notes.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 31 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11019 strings out of 493089
- 200510 string characters out of 6134842
- 254238 words of memory out of 5000000
- 14385 multiletter control sequences out of 15000+600000
+ 11020 strings out of 493089
+ 200533 string characters out of 6134842
+ 254247 words of memory out of 5000000
+ 14386 multiletter control sequences out of 15000+600000
  24203 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,43p,10434b,4917s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -614,10 +616,10 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 live/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Notes.pdf (6 pages, 148878 bytes).
+Output written on Notes.pdf (7 pages, 153832 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

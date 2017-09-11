@@ -87,7 +87,7 @@
 \begin{document}
 
 %\begin{titlepage}
-{\par\centering\textbf{\Large CHEME 3130: Analysis of Unit Paths in Thermodynamics}}
+{\par\centering\textbf{\Large CHEME 3130: Carnot Cycle and the Second Law of Thermodynamics}}
 \vspace{0.2in}
 {\par \centering \large{Jeffrey D. Varner$^{*}$}}
 \vspace{0.05in}
@@ -125,9 +125,9 @@ $a(T)$ and $b$ are substance specific, and be calculated in terms the critical t
 \subsection*{Student outcomes:}
 At the end of this lecture module, you will be able to:
 \begin{itemize}
-	\item[O$_1$]{Perform unit thermodynamic expansion and contraction operations using an ideal gas as a working fluid}
-	\item[O$_2$]{Perform unit thermodynamic expansion and contraction operations using advanced cubic equations of state as the working fluid}
-	\item[O$_3$]{Calculate the efficiency of hypothetical power generation cycles using the ideal gas as a working fluid}
+	\item[O$_1$]{Perform unit thermodynamic expansion and contraction operations using an ideal gas or advanced cubic equations of state as the working fluid}
+	\item[O$_2$]{Calculate the efficiency of hypothetical power generation cycles using an arbitrary working fluid}
+	\item[O$_3$]{Discuss the classical definition of entropy and the second law of thermodynamics}
 \end{itemize}
 
 \end{mdframed}
@@ -140,7 +140,7 @@ processes devised to convert heat to work e.g., steam engines, steam powered tur
 are also interconnected thermodynamic operations. These thermodynamic operations, called \textit{paths}, are composed of two types of physical operations, isothermal expansion (or contraction) and adiabatic expansion (or contraction). Let's start our discussion of these processes for \textit{closed} systems. Recall, that our general energy and material balances can be written in
 differential form as:
 \begin{eqnarray}\label{eqn:energy-balance-precursor-internal}
-d\left(mu\right)\Bigr|_{sys} &=& \delta{Q}+\delta{W}+\sum_{s=1}^{\mathcal{S}}\nu_{s}u_{s}\delta{m}_{s} + \sum_{r=1}^{\mathcal{R}}\delta E_{r}\\\label{eqn:material-balance-precursor-internal}
+d\left(mu\right)\Bigr|_{sys} &=& \delta{Q}+\delta{W}_{sh}+\sum_{s=1}^{\mathcal{S}}\nu_{s}h_{s}\delta{m}_{s} + \sum_{r=1}^{\mathcal{R}}\delta e_{r}\\\label{eqn:material-balance-precursor-internal}
 dm &=& \sum_{s=1}^{\mathcal{S}}\nu_{s}\delta{m}_{s}
 \end{eqnarray}where we have neglected changes in kinetic and potential energy in the system. For a closed system with no chemical reactions, our general differential balances reduce to:
 \begin{equation}\label{eqn:first-law-differential}
@@ -255,10 +255,11 @@ hold and cold reservoirs:
 \eta = 1 - \frac{T_{L}}{T_{H}}
 \end{equation}We can increase the efficiency by allowing $T_{H}\rightarrow\infty$ or by having a small value for $T_{L}$.
 As we shall see, the Carnot cycle is the \textit{most} efficient cycle for converting heat to work.
-However, unfortunately Carnot is imaginary but it can serve as a useful model system to measure real results against.
+However, unfortunately the Carnot cycle is imaginary; however, it can serve as a useful model system to measure real world results against.
 
 \subsubsection*{Change in a state function for a cyclic process}
-Beyond its efficiency, one of the other interesting things about Carnot is that it nicely demonstrates one of the central properties of \textit{state functions}:
+Beyond its efficiency, one of the other interesting things about Carnot is that it nicely demonstrates one of the central properties of \textit{state functions}
+such as internal energy:
 \begin{equation}
 dU = \sum_{j=\mathbb{P}_{1}}^{\left\{\mathbb{P}_{j}:\mathbb{P}_{j}\neq\mathbb{P}_{1}\right\}}dU_j = 0
 \end{equation}The net change in a state function, such as internal energy, temperature, pressure or volume (irrespective of the working fluid) is zero around a closed path.
@@ -289,7 +290,7 @@ Interestingly, non-state variables, such as heat and work, are \textit{not} cons
 net work done by the cycle:
 \begin{equation}
 \delta{W}_{net} = \sum_{j=\mathbb{P}_{1}}^{\left\{\mathbb{P}\right\}}\delta{W}_j\neq 0
-\end{equation}or after integration and substitution of work definitions:
+\end{equation}or after integration and substitution of the work definitions:
 \begin{equation}
 W_{net} = - nRT_{H}\ln\left(\frac{V_{2}}{V_{1}}\right) + C_{V}\left(T_{L} - T_{H}\right) - nRT_{L}\ln\left(\frac{V_{4}}{V_{3}}\right) + C_{V}\left(T_{H} - T_{L}\right)
 \end{equation}which reduces to:
@@ -297,8 +298,38 @@ W_{net} = - nRT_{H}\ln\left(\frac{V_{2}}{V_{1}}\right) + C_{V}\left(T_{L} - T_{H
 W_{net} = - nRT_{H}\ln\left(\frac{V_{2}}{V_{1}}\right) - nRT_{L}\ln\left(\frac{V_{4}}{V_{3}}\right) \neq{0}
 \end{equation}
 
+\clearpage
 
+\subsection*{Entropy and the Second Law of Thermodynamics}
+Entropy is a \textit{hypothesized} thermodynamic state function that was created to quantify the directionality of a process, and to determine how far away a
+real process is from its idealized reversible counterpart. There are several different ways to think about entropy e.g., the likelihood of different molecular states.
+However, we'll explore the classical idea developed by Clausius in 1865 (building upon Carnot's early work).
+Clausius \textit{defined} the thermodynamic property specific entropy $s$ as:
+\begin{equation}
+ds = \frac{\delta{q}_{rev}}{T}
+\end{equation}where $\delta{q}_{rev}$ denotes the heat absorbed by a reversible process normalized by the temperature.
+Entropy (like enthalpy) is \textit{path~independent}; the change in entropy depends only upon the initial and final state and not the path taken between
+the initial and final states. Thus, for any \textit{closed~path} the change in entropy is given by:
+\begin{equation}\label{eq-clasius-inequality}
+	\oint\frac{\delta{q}}{T}\leq{0}
+\end{equation}
+Equation \eqref{eq-clasius-inequality} is the \textit{Clausius~inequality};
+it governs the direction of possible entropy changes for both reversible and irreversible transformations.
+For a reversible closed path the Clausius inequality \textit{equals} zero;
+for an irreversible closed path (e.g., a real process) the sum of the entropy around the cycle is negative.
 
+The second law of thermodynamics governs the entropy change of a thermodynamic universe (system plus its surroundings):
+\begin{equation}
+	\Delta{S}_{univ}\geq{0}
+\end{equation}
+The second law can be used to determine whether a process is possible (and to estimate the efficiency of process).
+For real irreversible processes the entropy change of a universe is always positive:
+\begin{equation}
+	\Delta{S}_{univ} > 0
+\end{equation}On the other hand, for an \textit{idealized} reversible process the entropy changes for a universe equals zero:
+\begin{equation}
+	\Delta{S}_{univ} = 0
+\end{equation}
 
 \bibliography{References}
 
